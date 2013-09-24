@@ -105,6 +105,41 @@ class MinimaxAgent(MultiAgentSearchAgent):
     Your minimax agent (question 2)
   """
 
+  # def maxValue(self, gameState, agentIndex, depth):
+  #   # terminal test
+  #   if gameState.isWin() or gameState.isLose() or depth == 0:
+  #     # utility of game state
+  #     return self.evaluationFunction(gameState)
+
+  #   v = float("-inf")
+
+  #   # calculate for each action, all possible new game states
+  #   for action in gameState.getLegalActions(agentIndex):
+  #     v = max(v, minValue(gameState.generateSuccessor(0, action), 1, depth-1))
+
+  #   return v
+
+  # def minValue(self, gameState, agentIndex, depth):
+  #   # terminal test
+  #   if gameState.isWin() or gameState.isLose() or depth == 0:
+  #     # utility of game state
+  #     return self.evaluationFunction(gameState)
+
+  #   minScore = float("inf")
+  #   numAgents = gameState.getNumAgents()
+
+  #   for action in gameState.getLegalActions(agentIndex):
+  #     #v = gameState.generateSuccessor(agentIndex, action)
+
+  #     # need to minimize over all ghosts
+  #     if agentIndex == numAgents: # go back to pacman, did all the ghosts
+  #       v = min(v, maxValue(gameState.generateSuccessor(agentIndex, action),0,depth-1))
+  #     else:
+  #       v = min(v, minValue(gameState.generateSuccessor(agentIndex,action),agentIndex+1,depth))
+
+  #   return v
+
+
   def getAction(self, gameState):
     """
       Returns the minimax action from the current gameState using self.depth
@@ -126,7 +161,50 @@ class MinimaxAgent(MultiAgentSearchAgent):
         Returns the total number of agents in the game
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+
+    def maxValue(gameState, agentIndex, depth):
+      # terminal test
+      if gameState.isWin() or gameState.isLose() or depth == 0:
+        # utility of game state
+        return self.evaluationFunction(gameState)
+
+      v = float("-inf")
+
+      # calculate for each action, all possible new game states
+      for action in gameState.getLegalActions(agentIndex):
+        v = max(v, minValue(gameState.generateSuccessor(0, action), 1, depth-1))
+
+      return v
+
+    def minValue(gameState, agentIndex, depth):
+      # terminal test
+      if gameState.isWin() or gameState.isLose() or depth == 0:
+        # utility of game state
+        return self.evaluationFunction(gameState)
+
+      v = float("inf")
+      numAgents = gameState.getNumAgents()
+
+      for action in gameState.getLegalActions(agentIndex):
+        #v = gameState.generateSuccessor(agentIndex, action)
+
+        # need to minimize over all ghosts
+        if agentIndex == numAgents-1: # go back to pacman, did all the ghosts
+          v = min(v, maxValue(gameState.generateSuccessor(agentIndex, action),0,depth-1))
+        else:
+          v = min(v, minValue(gameState.generateSuccessor(agentIndex,action),agentIndex+1,depth))
+
+      return v
+
+    bestAction = Directions.STOP
+    score = float("-inf")
+    for action in gameState.getLegalActions():
+      newScore = max(score, minValue(gameState.generateSuccessor(0,action),1,self.depth))
+      if newScore > score:
+        bestAction = action
+        score = newScore
+    return bestAction
+    #util.raiseNotDefined()
 
 class AlphaBetaAgent(MultiAgentSearchAgent):
   """
