@@ -1,0 +1,104 @@
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 513
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 513
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 513
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Average Score: 213.08
+Scores:        -495, 516, 516, 516, 516, 516, 516, 516, -492, -492, 513, 516, 516, 516, 516, -492, 513, -492, -492, -492, 516, 516, 516, 516, -492, 516, 514, 516, -496, 514, 514, 514, 516, -492, -492, 516, 516, -492, 516, 516, 516, -495, 514, 516, -492, 516, -496, 516, 516, -495, 516, -495, 516, 516, 516, -492, -492, 516, -492, -492, 516, 516, 516, -492, 516, 514, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, -492, 516, -492, 516, 516, 516, 513, 516, 516, 516, -495, -496, 516, 516, -496, 516, 516, 516, -492, 516, -492, 516
+Win Rate:      70/100 (0.70)
+Record:        Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Loss, Win, Loss, Loss, Loss, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Loss, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Win, Loss, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss, Win
