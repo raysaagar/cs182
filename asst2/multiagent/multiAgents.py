@@ -118,7 +118,9 @@ class MinimaxAgent(MultiAgentSearchAgent):
 
     # agentIndex should be 0, since max should be run only on pacman
     # calculate for each action, all possible new game states
-    for action in gameState.getLegalActions(agentIndex):
+    actions = gameState.getLegalActions(agentIndex)
+    actions.remove(Directions.STOP)
+    for action in actions:
       v = max(v, self.minValue(gameState.generateSuccessor(agentIndex, action), agentIndex+1, depth-1))
     return v
 
@@ -175,13 +177,15 @@ class MinimaxAgent(MultiAgentSearchAgent):
     curBestAction = Directions.STOP
     # current best score
     curBestScore = float("-inf")
-    for action in gameState.getLegalActions(0):
+    actions = gameState.getLegalActions(0)
+    actions.remove(Directions.STOP)
+    for action in actions:
       newScore = max(curBestScore, self.minValue(gameState.generateSuccessor(0, action), 1, self.depth))
       if newScore > curBestScore:
         curBestAction = action
         curBestScore = newScore
     print curBestScore
-    return curBestAction
+    return curBestAction  
 
 class AlphaBetaAgent(MultiAgentSearchAgent):
   """
