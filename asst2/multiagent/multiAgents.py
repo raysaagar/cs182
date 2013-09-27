@@ -12,6 +12,13 @@ import random, util
 
 from game import Agent
 
+"""
+Brandon Sim
+Saagar Deshpande
+CS182 Problem Set 2
+9/26/13
+"""
+
 class ReflexAgent(Agent):
   """
     A reflex agent chooses an action at each choice point by examining
@@ -319,10 +326,85 @@ def betterEvaluationFunction(currentGameState):
     Your extreme ghost-hunting, pellet-nabbing, food-gobbling, unstoppable
     evaluation function (question 5).
 
-    DESCRIPTION: <write something here so we know what you did>
+    DESCRIPTION: We use the game's scoring functions so that Pacman will
+    know not to die and that he knows that he gets points for eating ghosts,
+    etc. 
+
+    get capsules
+    once get capsules and edible ghosts, go eat ghosts
+
+    Using n = 100 trials, we get a 91 percent win rate with well over 1000
+    point average in winning trials. The average is approximately 1500-1600 in
+    winning trials.
+
   """
   "*** YOUR CODE HERE ***"
-  util.raiseNotDefined()
+  manhattan = lambda c1, c2: abs(c1[0] - c2[0]) + abs(c1[1] - c2[1])
+  position = currentGameState.getPacmanPosition()
+  score = 0
+  if currentGameState.isLose():
+    return float("-inf")
+  score = scoreEvaluationFunction(currentGameState)
+  # incentivizes getting food in most efficient way possible
+  score -= calculateFoodDistanceScore(currentGameState)
+  ## If edible ghosts go eat
+  # gets ghost states
+  ghostStates = currentGameState.getGhostStates()
+  # gets how long the ghosts are scared
+  scaredTimes = [ghostState.scaredTimer for ghostState in ghostStates]
+  # gets the ghost positions
+  ghostPositions = [ghostState.getPosition() for ghostState in ghostStates]
+  # calculates manhattan distances to ghosts
+  distancesToGhosts = [manhattan(gp, position) for gp in ghostPositions]
+  # if pacman can reach the ghost before time runs out, give a penalty
+  # which is more severe the farther away he is from the ghost
+  distancePenaltyFactor = 1
+  for i in range(len(scaredTimes)):
+    if scaredTimes[i] > distancesToGhosts[i]:
+      score -= distancePenaltyFactor * distancesToGhosts[i]
+  # incentivizes getting capsules, but only if there aren't ghosts to eat
+  capsuleLocs = currentGameState.getCapsules()
+  if sum(scaredTimes) == 0:
+    score -= 50*len(capsuleLocs)
+  return score
+
+def calculateFoodDistanceScore(currentGameState):
+  foodGrid = currentGameState.getFood()
+  position = currentGameState.getPacmanPosition()
+  manhattan = lambda c1, c2: abs(c1[0] - c2[0]) + abs(c1[1] - c2[1])
+  score = 0
+  foodCoords = foodGrid.asList()
+
+  # SOLUTION 1: Find bounding box around all uneaten food locations
+  #finds bounding box around all uneaten food coordinates
+
+  if foodCoords:
+    minx = min([x[0] for x in foodCoords])
+    miny = min([x[1] for x in foodCoords])
+    maxx = max([x[0] for x in foodCoords])
+    maxy = max([x[1] for x in foodCoords])
+    bottomLeft = (minx, miny)
+    bottomRight = (minx, maxy)
+    topLeft = (maxx, miny)
+    topRight = (maxx, maxy)
+    cornerCoords = [bottomLeft, bottomRight, topLeft, topRight]
+    # adds 'diagonal' manhattan distance
+    score += manhattan(bottomLeft, topRight)
+    # finds distance from current position to nearest corner of bounding box
+    corner_dist = manhattan(position, min(cornerCoords, key=lambda c1: manhattan(c1, position)))
+    # gets all foods on the edge
+    #edgeFoodCoords = [x for x in foodCoords if x[0] == minx or x[0] == maxx or x[1] == miny or x[1] == maxy]
+    #edgeFoodCoords = foodCoords
+    # finds distance from current to closest food on edge
+    closest_food = min(foodCoords, key=lambda c1: manhattan(c1, position))
+    food_dist = manhattan(position, closest_food)
+    score += max(corner_dist, food_dist)
+
+    # if distance to closest food was added, add distance from food to closest corner
+    if max(corner_dist, food_dist) == food_dist:
+      score += manhattan(closest_food, min(cornerCoords, key=lambda c1: manhattan(c1, closest_food)))
+  return score
+
 
 # Abbreviation
 better = betterEvaluationFunction
