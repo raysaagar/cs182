@@ -432,18 +432,131 @@ def calculateFoodDistanceScore(currentGameState):
 # Abbreviation
 better = betterEvaluationFunction
 
+####### CONTEST #######
 class ContestAgent(MultiAgentSearchAgent):
   """
     Your agent for the mini-contest
   """
 
+# terminal test, or depth=0
+  def terminalTest(self, gameState, depth=4):
+    return gameState.isWin() or gameState.isLose() or depth == 0
+
+  def maxValue(self, gameState, agentIndex, depth=4):
+    # terminal test, returns utility of terminal game state
+    if self.terminalTest(gameState, depth):
+      return self.contestEvaluate(gameState)
+
+    v = float("-inf")
+
+    actions = gameState.getLegalActions(agentIndex)
+    actions.remove(Directions.STOP)
+    # agentIndex should be 0, since max should be run only on pacman
+    # calculate for each action, all possible new game states
+    for action in gameState.getLegalActions(agentIndex):
+      v = max(v, self.minValue(gameState.generateSuccessor(agentIndex, action), \
+        agentIndex+1, depth))
+    return v
+
+  def minValue(self, gameState, agentIndex, depth=4):
+    # terminal test, returns utility of terminal game state
+    if self.terminalTest(gameState, depth):
+      return self.contestEvaluate(gameState)
+
+    v = float("inf")
+    numAgents = gameState.getNumAgents()
+
+    # need to minimize over all ghosts. if last ghost, then return to pacman and decrease depth
+    nextAgentIndex = agentIndex+1
+    nextDepth = depth
+    nextFunction = self.minValue
+    if agentIndex == numAgents-1:
+      nextAgentIndex = 0
+      nextDepth = depth-1
+      nextFunction = self.maxValue
+
+    for action in gameState.getLegalActions(agentIndex):
+        v = min(v, nextFunction(gameState.generateSuccessor(agentIndex, action), nextAgentIndex, nextDepth))
+    return v
+
   def getAction(self, gameState):
     """
-      Returns an action.  You can use any method you want and search to any depth you want.
-      Just remember that the mini-contest is timed, so you have to trade off speed and computation.
-
-      Ghosts don't behave randomly anymore, but they aren't perfect either -- they'll usually
-      just make a beeline straight towards Pacman (or away from him if they're scared!)
+      getAction uses minimax
     """
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    # current best action, default start is stop
+    searchDepth = 2
+    curBestAction = Directions.STOP
+    curBestScore = float("-inf")
+    actions = gameState.getLegalActions(0)
+    actions.remove(Directions.STOP)
+    for action in actions:
+      newScore = self.minValue(gameState.generateSuccessor(0, action), 1, searchDepth)
+      if newScore > curBestScore:
+        curBestAction = action
+        curBestScore = newScore
+    #print curBestScore #debug, test against Berkeley values
+    return curBestAction
+
+  def contestEvaluate(self, currentGameState):
+    manhattan = lambda c1, c2: abs(c1[0] - c2[0]) + abs(c1[1] - c2[1])
+    position = currentGameState.getPacmanPosition()
+    score = 0
+    if currentGameState.isLose():
+      return float("-inf")
+    score = scoreEvaluationFunction(currentGameState)
+    # incentivizes getting food in most efficient way possible
+    score -= self.calculateFoodDistanceScore(currentGameState)
+    ## If edible ghosts go eat
+    # gets ghost states
+    ghostStates = currentGameState.getGhostStates()
+    # gets how long the ghosts are scared
+    scaredTimes = [ghostState.scaredTimer for ghostState in ghostStates]
+    # gets the ghost positions
+    ghostPositions = [ghostState.getPosition() for ghostState in ghostStates]
+    # calculates manhattan distances to ghosts
+    distancesToGhosts = [manhattan(gp, position) for gp in ghostPositions]
+    # if pacman can reach the ghost before time runs out, give a penalty
+    # which is more severe the farther away he is from the ghost
+    distancePenaltyFactor = 1
+    for i in range(len(scaredTimes)):
+      if scaredTimes[i] > distancesToGhosts[i]:
+        score -= distancePenaltyFactor * distancesToGhosts[i]
+    # incentivizes getting capsules, but only if there aren't ghosts to eat
+    capsuleLocs = currentGameState.getCapsules()
+    if sum(scaredTimes) == 0:
+      score -= 50*len(capsuleLocs)
+    return score
+
+  def calculateFoodDistanceScore(self, currentGameState):
+    foodGrid = currentGameState.getFood()
+    position = currentGameState.getPacmanPosition()
+    manhattan = lambda c1, c2: abs(c1[0] - c2[0]) + abs(c1[1] - c2[1])
+    score = 0
+    foodCoords = foodGrid.asList()
+
+    # SOLUTION 1: Find bounding box around all uneaten food locations
+    #finds bounding box around all uneaten food coordinates
+
+    if foodCoords:
+      minx = min([x[0] for x in foodCoords])
+      miny = min([x[1] for x in foodCoords])
+      maxx = max([x[0] for x in foodCoords])
+      maxy = max([x[1] for x in foodCoords])
+      bottomLeft = (minx, miny)
+      bottomRight = (minx, maxy)
+      topLeft = (maxx, miny)
+      topRight = (maxx, maxy)
+      cornerCoords = [bottomLeft, bottomRight, topLeft, topRight]
+      # adds 'diagonal' manhattan distance
+      score += manhattan(bottomLeft, topRight)
+      # finds distance from current position to nearest corner of bounding box
+      corner_dist = manhattan(position, min(cornerCoords, key=lambda c1: manhattan(c1, position)))
+      # finds distance from current to closest food on edge
+      closest_food = min(foodCoords, key=lambda c1: manhattan(c1, position))
+      food_dist = manhattan(position, closest_food)
+      score += max(corner_dist, food_dist)
+
+      # if distance to closest food was added, add distance from food to closest corner
+      if max(corner_dist, food_dist) == food_dist:
+        score += manhattan(closest_food, min(cornerCoords, key=lambda c1: manhattan(c1, closest_food)))
+    return score
