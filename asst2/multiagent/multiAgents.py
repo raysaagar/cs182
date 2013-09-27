@@ -328,14 +328,37 @@ def betterEvaluationFunction(currentGameState):
 
     DESCRIPTION: We use the game's scoring functions so that Pacman will
     know not to die and that he knows that he gets points for eating ghosts,
-    etc. 
+    etc. In addition, we noticed that pacman often thrashes around without getting
+    food in fear of getting caught by ghosts. To fix these problems, we use the 
+    following:
 
-    get capsules
-    once get capsules and edible ghosts, go eat ghosts
+    1)  we incentivize pacman to get food in the most efficient way possible
+      this entails getting food while spending the least steps, since we lose 
+      points for each step we take. to do this, we use the heuristic we used
+      in our homework last week for search, which had a nodes expanded score of
+      almost 7000. this calculates a higher score if pacman has to take a longer
+      path to get to all the food, so we subtract it from the score to 
+      incentivize shorter, more efficient paths.
 
-    Using n = 100 trials, we get a 91 percent win rate with well over 1000
-    point average in winning trials. The average is approximately 1500-1600 in
-    winning trials.
+    2)  next, we incentivize pacman to get capsules if there are not ghosts 
+      ready to be eaten. we only deduct points for uneaten capsules if 
+      the ghosts cannot be eaten, since we don't want pacman to waste a capsule
+      by eating it when the ghosts are still in their weakened states.
+
+    3)  finally, we incentivize pacman to eat ghosts which can be eaten.
+    we check if the ghost's scared timer is higher than the ghost's distance from 
+    pacman, which means that the ghost will remain scared for longer than the time
+    it will take pacman to get there. if so, then we penalize pacman for not 
+    going and eating the ghost. if the ghost timer is shorter than pacman's distance
+    pacman cannot possibly eat the ghost, so we don't penalize pacman for not eating
+    that ghost.
+
+    4)  we strongly discourage pacman to not die, by returning -inf for dying.
+
+    These four guiding principles helped us get very good results.
+
+    Using n = 100 trials, we get a 91 percent win rate with an average 
+    during wins of approximately 1500-1600.
 
   """
   "*** YOUR CODE HERE ***"
