@@ -120,7 +120,8 @@ class MinimaxAgent(MultiAgentSearchAgent):
     # agentIndex should be 0, since max should be run only on pacman
     # calculate for each action, all possible new game states
     for action in gameState.getLegalActions(agentIndex):
-      v = max(v, self.minValue(gameState.generateSuccessor(agentIndex, action), agentIndex+1, depth))
+      v = max(v, self.minValue(gameState.generateSuccessor(agentIndex, action), \
+        agentIndex+1, depth))
     return v
 
   def minValue(self, gameState, agentIndex, depth):
@@ -257,6 +258,41 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
   """
     Your expectimax agent (question 4)
   """
+  def terminalTest(self, gameState, depth):
+    return gameState.isWin() or gameState.isLose() or depth == 0
+
+  def maxValue(self, gameState, agentIndex, depth):
+    if self.terminalTest(gameState, depth):
+      return self.evaluationFunction(gameState)
+    v = float("-inf")
+    actions = gameState.getLegalActions(0)
+    actions.remove(Directions.STOP)
+    for action in actions:
+      v = max(v, float(self.chanceValue(gameState.generateSuccessor(agentIndex, action), \
+        agentIndex+1, depth)))
+    return v
+
+  def chanceValue(self, gameState, agentIndex, depth):
+    if self.terminalTest(gameState, depth):
+      return self.evaluationFunction(gameState)
+    v = float("inf")
+    numAgents = gameState.getNumAgents()
+
+    nextAgentIndex = agentIndex+1
+    nextDepth = depth
+    nextFunction = self.chanceValue
+    if agentIndex == numAgents-1:
+      nextAgentIndex = 0
+      nextDepth = depth-1
+      nextFunction = self.maxValue
+
+    averageScore = 0
+    actions = gameState.getLegalActions(agentIndex)
+    for action in actions:
+      averageScore += nextFunction(gameState.generateSuccessor(agentIndex, action), \
+        nextAgentIndex, nextDepth)
+    # assume uniform distribution over actions
+    return averageScore / float(len(actions))
 
   def getAction(self, gameState):
     """
@@ -266,7 +302,17 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
       legal moves.
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    curBestAction = Directions.STOP
+    curBestScore = float("-inf")
+    actions = gameState.getLegalActions(0)
+    actions.remove(Directions.STOP)
+    for action in actions:
+      newScore = float(self.chanceValue(gameState.generateSuccessor(0, action), \
+        1, self.depth))
+      if newScore > curBestScore:
+        curBestAction = action
+        curBestScore = newScore
+    return curBestAction
 
 def betterEvaluationFunction(currentGameState):
   """
@@ -296,4 +342,3 @@ class ContestAgent(MultiAgentSearchAgent):
     """
     "*** YOUR CODE HERE ***"
     util.raiseNotDefined()
-
