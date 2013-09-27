@@ -1,3 +1,121 @@
+Pacman emerges victorious! Score: 512
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 514
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 514
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
 Pacman died! Score: -495
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
@@ -5,68 +123,251 @@ Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -494
 Pacman emerges victorious! Score: 516
 Pacman died! Score: -492
-Pacman died! Score: -492
-Pacman emerges victorious! Score: 513
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman died! Score: -492
-Pacman emerges victorious! Score: 513
-Pacman died! Score: -492
-Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
 Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 510
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
 Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 512
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
 Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -494
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -497
 Pacman emerges victorious! Score: 516
 Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
 Pacman emerges victorious! Score: 514
-Pacman emerges victorious! Score: 514
-Pacman emerges victorious! Score: 514
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -492
-Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
-Pacman died! Score: -495
-Pacman emerges victorious! Score: 514
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -492
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -496
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -495
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -495
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -492
-Pacman died! Score: -492
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -494
 Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman died! Score: -492
-Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 514
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
@@ -76,29 +377,628 @@ Pacman emerges victorious! Score: 516
 Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
-Pacman died! Score: -492
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 513
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
-Pacman emerges victorious! Score: 516
-Pacman died! Score: -495
-Pacman died! Score: -496
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman died! Score: -496
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
 Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -497
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -496
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 512
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
 Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
 Pacman died! Score: -492
 Pacman emerges victorious! Score: 516
-Average Score: 213.08
-Scores:        -495, 516, 516, 516, 516, 516, 516, 516, -492, -492, 513, 516, 516, 516, 516, -492, 513, -492, -492, -492, 516, 516, 516, 516, -492, 516, 514, 516, -496, 514, 514, 514, 516, -492, -492, 516, 516, -492, 516, 516, 516, -495, 514, 516, -492, 516, -496, 516, 516, -495, 516, -495, 516, 516, 516, -492, -492, 516, -492, -492, 516, 516, 516, -492, 516, 514, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, -492, 516, -492, 516, 516, 516, 513, 516, 516, 516, -495, -496, 516, 516, -496, 516, 516, 516, -492, 516, -492, 516
-Win Rate:      70/100 (0.70)
-Record:        Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Loss, Win, Loss, Loss, Loss, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Loss, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Win, Loss, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss, Win
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -496
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 510
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 514
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 510
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 514
+Pacman emerges victorious! Score: 514
+Pacman died! Score: -492
+Pacman died! Score: -496
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 512
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -496
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -495
+Pacman died! Score: -492
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -496
+Pacman died! Score: -494
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman died! Score: -495
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 510
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -497
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -494
+Pacman died! Score: -494
+Pacman died! Score: -494
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Pacman emerges victorious! Score: 516
+Pacman died! Score: -492
+Average Score: 172.958
+Scores:        512, -492, -492, 516, -495, 516, -492, -494, 516, 516, -494, 516, -492, 516, 516, -492, 516, 516, 516, 516, -492, -492, -495, 516, 516, 516, 516, -492, -492, 516, 516, 514, -492, -494, -492, -492, -494, -492, 516, -492, 516, 516, -494, 516, -492, 516, 516, -492, -494, 516, -492, 516, 516, -492, 516, 516, -492, 516, 516, 516, -492, 516, 516, 516, 516, -494, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, 516, -495, 514, -492, -494, -492, -492, 516, 516, 516, -492, 516, -494, -494, 516, 516, 516, 516, 516, 516, 516, -492, 516, -494, -492, 514, -492, -492, 516, -492, 516, -494, 516, -495, 516, 516, -492, 516, 516, 516, -495, 516, 516, 516, 516, 516, 516, -492, -494, 516, -492, 516, -492, 516, -492, 516, 516, 516, 516, 516, 516, 510, 516, 516, -494, 516, 516, -495, -492, 516, -494, -494, 512, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, -495, -492, 516, 516, 516, 516, -492, 516, 516, -492, 516, -492, -492, 516, 516, 516, -492, 516, -492, 514, 516, 516, -492, -492, -496, 516, 516, 516, 516, 516, -495, -492, 516, 516, 516, -494, 516, 516, -495, 516, -494, 516, 516, -492, -492, -492, 516, -492, 516, 516, 516, 516, 516, -492, 516, -492, 516, -494, -494, -494, -492, -492, 516, 516, -495, 516, -492, 516, 516, -492, 516, 516, 516, -492, -494, -492, -492, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, -492, 516, -492, 516, -492, 516, -492, -492, -492, 516, 516, -494, 516, 516, -492, -495, 516, 516, -492, 516, -492, 516, 516, -492, 516, -492, 516, 516, 516, -494, 516, 516, -492, 516, -492, 516, -492, 516, -492, 516, 516, 516, 516, 516, 516, 516, -492, 516, -492, 516, 516, 516, -492, 516, -492, -494, -492, 516, 516, -497, 516, -496, 516, 516, -492, 516, -492, 516, 516, 516, -494, 516, 516, 516, 516, 516, -492, 516, -492, -492, 514, 516, 516, -492, 516, 516, 516, -494, -494, -492, 516, 516, 516, -492, 514, 516, 516, 516, -492, 516, 516, 516, 516, 516, 516, 516, 516, -494, 516, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, 516, -496, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, -494, -492, -494, 516, -492, -497, 516, -494, 516, -492, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, 516, 514, 516, 516, -494, -492, 516, -494, 516, -492, 516, 516, 516, -496, -492, 512, 516, 516, 516, 516, 516, -494, -492, 516, -492, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, -492, 516, 516, 516, -492, 516, 516, 516, -492, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, 516, -495, -492, -492, -494, 516, -492, 516, -492, 516, 516, 516, 516, -492, -492, -495, 516, -492, -492, 516, -492, 516, -492, 516, 516, 516, 516, 516, -495, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, -492, -492, -492, 516, 516, 516, 516, -492, -492, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, -494, 516, 516, 516, -492, 516, 516, 516, -492, -496, 516, 516, -492, -494, -492, -492, -492, 516, -492, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, -492, 516, -492, -492, -496, -492, 516, 516, 516, -492, 516, -492, 516, -494, 516, -492, 514, 516, 516, -492, -492, -496, 516, 516, 516, 516, 516, 516, 514, -495, 516, 516, -492, -492, 516, 516, 516, 516, -492, 516, -492, 516, 516, 516, -492, 516, 516, 516, 516, 516, -492, 516, 516, 516, -492, 516, 516, 516, -492, 516, 516, -495, 516, 516, 516, 516, 516, 516, -492, -492, 516, -492, -492, -492, 516, -492, 516, 516, 516, 516, 516, -492, 516, 516, 516, -492, 516, -492, -492, -492, 516, -494, 516, 516, 516, -492, -492, 516, 516, -495, 516, 514, -492, 516, 516, 516, 516, -494, -492, -494, -492, 516, -492, 516, 516, 516, 516, -492, 516, 516, -492, 516, 516, 516, 516, 516, 516, -494, -492, -492, -494, -492, -492, 516, 516, 516, -492, -492, 516, 516, 516, 516, -494, 516, 516, -492, 516, -492, 516, 516, 516, -492, -492, 516, -492, 516, -492, 516, 516, -494, 516, -492, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, -495, 516, -492, 516, 516, 516, 510, -492, 514, -492, 516, -494, -492, 516, 514, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, -492, -492, 516, 516, 516, 516, 516, 516, -494, 516, -492, 516, 516, 516, -492, 516, 516, -492, 510, 516, 516, -492, -495, 516, -492, 516, -492, 516, 516, 516, 516, 516, 516, -494, -492, -492, -494, 516, -492, 516, -492, 516, -492, -492, 516, 516, -492, 516, 514, 514, -492, -496, 516, 516, 516, 516, 516, -492, 516, 516, 516, 516, 516, 516, 516, -494, -492, -492, 516, 516, 516, 516, 516, 516, -494, -492, 512, -492, 516, 516, -492, 516, 516, -495, 516, 516, -492, 516, -494, 516, -494, 516, 516, -492, 516, -492, -496, -492, -492, 516, 516, -492, -492, 516, 516, 516, -494, -495, -492, -495, 516, -492, 516, 516, 516, 516, 516, -494, 516, -494, 516, 516, 516, 516, -492, -496, -494, -494, 516, 516, -492, -492, -492, -495, 516, 516, -492, -492, 510, 516, 516, 516, 516, 516, 516, -497, 516, 516, 516, -492, 516, -494, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, -494, 516, 516, -494, 516, 516, 516, -494, -494, -494, 516, -492, 516, 516, 516, 516, 516, 516, 516, 516, 516, 516, -492, 516, 516, 516, -492, 516, -492, 516, 516, -492, 516, -492, 516, -492, 516, 516, -492, 516, 516, -492, 516, 516, -492, 516, 516, 516, -492, 516, -492
+Win Rate:      660/1000 (0.66)
+Record:        Win, Loss, Loss, Win, Loss, Win, Loss, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Win, Win, Win, Loss, Loss, Loss, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Loss, Loss, Loss, Loss, Loss, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Loss, Win, Loss, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss, Loss, Loss, Loss, Win, Win, Win, Loss, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Loss, Loss, Win, Loss, Loss, Win, Loss, Win, Loss, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Loss, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Loss, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Loss, Loss, Win, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Loss, Win, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Loss, Win, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Loss, Win, Loss, Loss, Loss, Loss, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Loss, Loss, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Loss, Win, Loss, Win, Loss, Win, Loss, Loss, Loss, Win, Win, Loss, Win, Win, Loss, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Win, Loss, Loss, Loss, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Loss, Loss, Win, Win, Win, Loss, Win, Win, Win, Loss, Loss, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Loss, Loss, Win, Loss, Loss, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Loss, Loss, Win, Loss, Win, Loss, Win, Win, Win, Win, Loss, Loss, Loss, Win, Loss, Loss, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Loss, Loss, Win, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Loss, Loss, Win, Win, Loss, Loss, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Loss, Loss, Loss, Loss, Win, Win, Win, Loss, Win, Loss, Win, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Loss, Win, Win, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Win, Loss, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Loss, Loss, Loss, Loss, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Loss, Win, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Loss, Win, Win, Win, Win, Loss, Win, Loss, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Loss, Win, Loss, Win, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Loss, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Loss, Loss, Win, Loss, Win, Loss, Win, Loss, Loss, Win, Win, Loss, Win, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Loss, Loss, Win, Win, Win, Win, Win, Win, Loss, Loss, Win, Loss, Win, Win, Loss, Win, Win, Loss, Win, Win, Loss, Win, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Loss, Loss, Loss, Win, Win, Loss, Loss, Win, Win, Win, Loss, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Win, Win, Loss, Win, Loss, Win, Win, Win, Win, Loss, Loss, Loss, Loss, Win, Win, Loss, Loss, Loss, Loss, Win, Win, Loss, Loss, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Loss, Loss, Win, Loss, Win, Win, Win, Win, Win, Win, Win, Win, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss, Win, Win, Loss, Win, Loss, Win, Loss, Win, Win, Loss, Win, Win, Loss, Win, Win, Loss, Win, Win, Win, Loss, Win, Loss
