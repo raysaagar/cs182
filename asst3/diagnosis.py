@@ -117,11 +117,16 @@ if __name__ == '__main__':
     # C = Literal('C',True)
     # KF = Literal('KF', False)
     # HF = Literal('HF', False)
-    clause1 = Clause([Literal('C',True),    Literal('KF', False),Literal('HF', False)])
-    clause2 = Clause([Literal('F', True),   Literal('NF', False),Literal('BF', False)])
-    clause3 = Clause([Literal('BC', True),  Literal('FF', False),Literal('LF', False)])
-    clause4 = Clause([Literal('HBP', True), Literal('KF', False),Literal('BF', False)])
-    clause5 = Clause([Literal('H', True),   Literal('NF', False),Literal('HF', False), Literal('KF', False)])
+    # clause1 = Clause([Literal('C',True),    Literal('KF', False),Literal('HF', False)])
+    # clause2 = Clause([Literal('F', True),   Literal('NF', False),Literal('BF', False)])
+    # clause3 = Clause([Literal('BC', True),  Literal('FF', False),Literal('LF', False)])
+    # clause4 = Clause([Literal('HBP', True), Literal('KF', False),Literal('BF', False)])
+    # clause5 = Clause([Literal('H', True),   Literal('NF', False),Literal('HF', False), Literal('KF', False)])
+    clause1 = Clause([Literal('KF', False),Literal('HF', False)])
+    clause2 = Clause([Literal('NF', False),Literal('BF', False)])
+    clause3 = Clause([Literal('FF', False),Literal('LF', False)])
+    clause4 = Clause([Literal('KF', False),Literal('BF', False)])
+    clause5 = Clause([Literal('NF', False),Literal('HF', False), Literal('KF', False)])
 
     clauses = [clause1, clause2, clause3, clause4, clause5]
     p = 0.5
