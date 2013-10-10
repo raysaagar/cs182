@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.13)  10 OCT 2013 06:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.9.13)  10 OCT 2013 06:03
 entering extended mode
-**C:/Users/BKS/Documents/Harvard/Classes/Fall*2013/cs182/cs182/asst3/tex/Deshpa
-nde_Sim_pset3_cs182.tex
+**C:/Users/BKS/Documents/Harvard/Classes/Fall*2013/cs182/cs182/asst3/tex_indivi
+dual/Sim_pset3_cs182.tex
 
-("C:/Users/BKS/Documents/Harvard/Classes/Fall 2013/cs182/cs182/asst3/tex/Deshpa
-nde_Sim_pset3_cs182.tex"
+("C:/Users/BKS/Documents/Harvard/Classes/Fall 2013/cs182/cs182/asst3/tex_indivi
+dual/Sim_pset3_cs182.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -189,8 +189,8 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 \f@ncyO@olf=\skip56
 \f@ncyO@orf=\skip57
 )
-("C:\Users\BKS\Documents\Harvard\Classes\Fall 2013\cs182\cs182\asst3\tex\Deshpa
-nde_Sim_pset3_cs182.aux")
+("C:\Users\BKS\Documents\Harvard\Classes\Fall 2013\cs182\cs182\asst3\tex_indivi
+dual\Sim_pset3_cs182.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
 LaTeX Font Info:    ... okay on input line 48.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
@@ -263,50 +263,22 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 {C:/Users/BKS/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2] <results.png, id=15, 838.63312pt x 167.87718pt>
-File: results.png Graphic file (type png)
- <use results.png>
-Package pdftex.def Info: results.png used on input line 132.
-(pdftex.def)             Requested size: 433.62001pt x 86.80225pt.
-
-Overfull \hbox (36.88156pt too wide) in paragraph at lines 132--133
- [] 
- []
-
-[3 <C:/Users/BKS/Documents/Harvard/Classes/Fall 2013/cs182/cs182/asst3/tex/resu
-lts.png>]
-File: results.png Graphic file (type png)
- <use results.png>
-Package pdftex.def Info: results.png used on input line 146.
-(pdftex.def)             Requested size: 433.62001pt x 86.80225pt.
- [4]
-("C:\Users\BKS\Documents\Harvard\Classes\Fall 2013\cs182\cs182\asst3\tex\Deshpa
-nde_Sim_pset3_cs182.aux") ) 
+("C:\Users\BKS\Documents\Harvard\Classes\Fall 2013\cs182\cs182\asst3\tex_indivi
+dual\Sim_pset3_cs182.aux") ) 
 Here is how much of TeX's memory you used:
- 2731 strings out of 494045
- 35365 string characters out of 3145975
- 98325 words of memory out of 3000000
- 6002 multiletter control sequences out of 15000+200000
- 11959 words of font info for 47 fonts, out of 3000000 for 9000
+ 2693 strings out of 494045
+ 34907 string characters out of 3145975
+ 91289 words of memory out of 3000000
+ 5975 multiletter control sequences out of 15000+200000
+ 6836 words of font info for 27 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 27i,10n,43p,1196b,489s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mtt12.pfb>
-Output written on Deshpande_Sim_pset3_cs182.pdf (4 pages, 109659 bytes).
+ 27i,6n,43p,334b,188s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr17.pfb>
+Output written on Sim_pset3_cs182.pdf (1 page, 23780 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
