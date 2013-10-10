@@ -1,8 +1,9 @@
 '''
 Created on Sep 23, 2013
 
-@Saagar Deshpande, Brandon Sim
+@Brandon Sim, Saagar Deshpande
 CS 182
+WalkSAT implementation
 '''
 
 import random
@@ -86,6 +87,7 @@ def WalkSAT(clauses, p, max_flips):
 
 # better "walksat" algorithm,
 # essentially just greedy algorithm
+# please see our PDF submission for very clear documentation on what we do
 def WalkSAT_Better(clauses, max_flips):
     """YOUR CODE HERE"""
     literal_dict = {}
