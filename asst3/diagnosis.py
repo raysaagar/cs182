@@ -1,72 +1,87 @@
 '''
 Created on Sep 23, 2013
 
-@author: Your name here
+@Saagar Deshpande, Brandon Sim
+CS 182
 '''
 
-import random;
+import random
+from random import choice
 
-def WalkSAT(clauses,p,max_flips):
-    """YOUR CODE HERE"""
-    # model <-- random assignment of true/false to symbols in clauses
-
+# updates all literals in all clauses
+def updateClauses(clauses, literal_dict):
     for c in clauses:
         for lit in c.literals:
-            if (random.random() > 0.5):
-                lit.setValue(True)
-            else:
-                lit.setValue(False)
+            lit.setValue(literal_dict[lit.name])
+    return clauses
+
+# walkSAT algorithm
+def WalkSAT(clauses, p, max_flips):
+    """YOUR CODE HERE"""
+    literal_dict = {}
+    for c in clauses:
+        for lit in c.literals:
+            literal_dict[lit.name] = False
+
+    # model <-- random assignment of true/false to symbols in clauses
+    for key in literal_dict:
+        if (random.random() > 0.5):
+            literal_dict[key] = True
+        else:
+            literal_dict[key] = False
+
+    clauses = updateClauses(clauses, literal_dict)
+    numClauses = len(clauses)
 
     #for i = 1 to max_flips:
-    for i in range(0,max_flips):
+    for i in range(max_flips):
         # for max count in randomizer later
-        numSatisfied = 0
+        notSatisfiedClauses = []
 
-        # if model satifies clauses:
-        #     return model
-        for c in clauses:
-            allTrue = True
-            if c.evaluate == False:
-                allTrue = False
-                # don't break so we can count all clauses that are satisfied
-            else:
-                numSatisfied += 1
+        for j in range(numClauses):
+            if clauses[j].evaluate() == False:
+                notSatisfiedClauses.append(j)
 
-        if allTrue:
+        numNotSatisfied = len(notSatisfiedClauses)
+
+        if numNotSatisfied == 0:
             return clauses
 
         # clause = randomly selected clause from clauses that are false in model
-        randClauseIndex = int(random.random()*len(clauses))
-        randClause = clauses[randClauseIndex]
+        randClause = clauses[choice(range(numNotSatisfied))]
         literals = randClause.literals
 
         # with prob p:
-        #     flip the value of a randomly selected symbol in clause
+        #     flip the value  of a randomly selected symbol in clause
         if random.random() <= p:
-            randSymbolIndex = int(random.random()*len(literals))
-            literals[randSymbolIndex].setValue(not literals[randSymbolIndex].value)
+            randSymbolIndex = choice(range(len(literals)))
+            literal_dict[literals[randSymbolIndex].name] = not literals[randSymbolIndex].value
+            # update each literal
+            clauses = updateClauses(clauses, literal_dict)
         # else:
         #     flip the symbol in clause that maximizes the number of satisfied clauses
         else:
             index = -1
-            for i in range(0, len(literals)):
-                literals[i].setValue(not literals[i].value)
+            numSatisfied = 0
+            newSatisfied = 0
+            for k in range(len(literals)):
+                literal_dict[literals[k].name] = not literals[k].value
+                #literals[i].setValue(not literals[i].value)
+                clauses = updateClauses(clauses, literal_dict)
 
-                newSatisfied = 0
                 # check number satisfied
                 for c in clauses:
                     if c.evaluate == True:
                         newSatisfied += 1
                 if newSatisfied >= numSatisfied:
                     numSatisfied = newSatisfied
-                    index = i
-                literals[i].setValue(not literals[i].value)
-            literals[index].setValue(not literals[index].value)
-
+                    index = k
+                literal_dict[literals[k].name] = not literals[k].value
+                clauses = updateClauses(clauses, literal_dict)
+                #literals[i].setValue(not literals[i].value)
+            literal_dict[literals[index].name] = not literals[index].value
+            clauses = updateClauses(clauses, literal_dict)
     return False
-
-
-
 
 class Literal:
     """Represents a literal"""
@@ -108,38 +123,36 @@ class Clause:
 
 if __name__ == '__main__':
     """"your code here: you should create the clauses that form an input to walkSAT and run walkSAT"""
-    # ~C V KF V HF
-    # ~F V NF V BF
-    # ~BC V FF V LF
-    # ~HBP V KF V BF
-    # ~H V NF V HF V KF
+    kf  =   Literal('kidney_failure',       False)
+    hf  =   Literal('heart_failure',        False)
+    bff =   Literal('bloodflow_failure',    False)
+    nf  =   Literal('neuro_failure',        False)
+    lf  =   Literal('liver_failure',        False)
+    nkf =   Literal('kidney_failure',       True)
+    
+    Cough                   = Clause([kf, hf])
+    Fever                   = Clause([nf, bff])
+    Blood_clot              = Clause([bff, lf])
+    Stomachache             = Clause([nkf])
+    High_blood_pressure     = Clause([kf, bff])
+    Headache                = Clause([nf, hf, kf])
 
-    # C = Literal('C',True)
-    # KF = Literal('KF', False)
-    # HF = Literal('HF', False)
-    # clause1 = Clause([Literal('C',True),    Literal('KF', False),Literal('HF', False)])
-    # clause2 = Clause([Literal('F', True),   Literal('NF', False),Literal('BF', False)])
-    # clause3 = Clause([Literal('BC', True),  Literal('FF', False),Literal('LF', False)])
-    # clause4 = Clause([Literal('HBP', True), Literal('KF', False),Literal('BF', False)])
-    # clause5 = Clause([Literal('H', True),   Literal('NF', False),Literal('HF', False), Literal('KF', False)])
-    clause1 = Clause([Literal('KF', False),Literal('HF', False)])
-    clause2 = Clause([Literal('NF', False),Literal('BF', False)])
-    clause3 = Clause([Literal('FF', False),Literal('LF', False)])
-    clause4 = Clause([Literal('KF', False),Literal('BF', False)])
-    clause5 = Clause([Literal('NF', False),Literal('HF', False), Literal('KF', False)])
+    clauses = [Cough, Fever, Blood_clot, Stomachache, High_blood_pressure, Headache]
 
-    clauses = [clause1, clause2, clause3, clause4, clause5]
-    p = 0.5
-    max_flips = 10
+    p = 0.2
+    max_flips = 5
 
     model = WalkSAT(clauses, p, max_flips)
 
     if not model:
         print "Failure"
     else:
+        print "diagnosis: patient has"
+        diagnosis = {}
         for c in model:
             for lit in c.literals:
-                print lit.__str__() + " "
-            print "\n"
+                diagnosis[lit.name] = lit.value
+        print [c for c in diagnosis if diagnosis[c]]
+
     # print function is pretty wonky
     # print model.__str__()

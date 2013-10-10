@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+%Mathematical TeX packages from the AMS
+\usepackage{amssymb,amsmath,amsthm} 
+%geometry (sets margin) 
+\usepackage[margin=1.25in]{geometry}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\def\ci{\perp\!\!\!\perp}
+%=============================================================
+%Redefining the 'section' environment as a 'problem' with dots at the end
+
+
+\makeatletter
+\newenvironment{problem}{\@startsection
+       {section}
+       {1}
+       {-.2em}
+       {-3.5ex plus -1ex minus -.2ex}
+       {2.3ex plus .2ex}
+       {\pagebreak[3] %basic widow-orphan matching
+       \large\bf\noindent{Problem }
+       }
+       }
+       {%\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+       \begin{center}\large\bf \ldots\ldots\ldots\end{center}}
+\makeatother
+
+
+%=============================================================
+%Fancy-header package to modify header/page numbering 
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Brandon Sim}
+\chead{} 
+\rhead{\thepage} 
+\lfoot{\small Computer Science 182} 
+\cfoot{} 
+\rfoot{\footnotesize Problem Set 2} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+\setlength\voffset{-0.25in}
+\setlength\textheight{648pt}
+\setlength\parindent{0pt}
+%=============================================================
+%Contents of problem set
+
+\begin{document}
+
+\title{Computer Science 182: Problem Set 2, Written}
+\author{Brandon Sim}
+
+\maketitle
+
+\begin{problem}{}
+Here we compare the performance of our pacman alpha-beta agent when playing against a directional ghost against its performance when playing against a random ghost. We compare the performance by running 50 trials. Against the directional ghost, the alpha-beta agent wins less than 20\% of the time, while against the random ghosts, the alpha-beta agent wins slightly over 50\% of the time. We see that the alpha-beta agent performs much better against the random ghost than it does against the directional ghost. The alpha-beta agent plays poorly against the directional ghost because the directional ghost is written to always rush pacman when they can and run away from him when pacman has eaten a special pellet. However, the alpha-beta agent only maximizes given the evaluation function which is simply the game score, so he does not know that when enough ghosts rush at him he is more likely to get trapped and die. Against the random ghosts, the alpha-beta agent plays a bit better because the random ghosts rarely coordinate well enough to put pacman in a situation where he is trapped. So, using alpha-beta minimax, pacman can normally figure out a way to survive and escape from the ghosts.
+\end{problem}
+
+\begin{problem}{}
+I would write a ghost agent which runs a minimax algorithm with alpha-beta pruning for speed. We can likely assume that the player will try to play optimally, although it may be worth it to sometimes expect errors in play since humans cannot perfectly judge optimality at great depths. In addition, I would change the heuristic evaluation function used to evaluate the score of different game states. There are several things to consider here: the first is to attempt to try to trap pacman in corners or narrow corridors on the game field. I can write a heuristic to look for corridors on the map and make sure the ghosts block the exits if pacman ever gets into the corridor. In addition, we can make an estimate as we did in the previous problem set about search about how many steps it will take for pacman to retrieve the rest of the food. We can use this heuristic and add it to our score, which will incentivize the ghosts to make it take longer for pacman to get all the food and win. In addition, we can attempt to minimize the distance between pacman and the ghosts. I can also look at how much food is left and where the remaining food is, as in some cases it may be possible to prevent pacman from finishing the map if the ghost and map layout permit it by patrolling the areas of remaining food.
+\end{problem}
+
+
+\begin{problem}{}
+\begin{enumerate}[(a)]
+\item Given the min-max tree shown on the problem set, the algorithm will prune nodes C and D if \fbox{$A\geq 6, B\geq 6$}. This is because on the left side of the tree, the max layer already has a 6. So, if A and B are at least 6, we know the max layer will choose a value of at least 6. But this means that the min layer above will just choose the 6 from the left side of the tree, and it can then avoid expanding nodes C and D.
+
+\item \fbox{Yes, alpha-beta does have to expand the node with value 6}, because at this point while running from left to right, it does not yet have enough information to guarantee that it will not have to check the 6. Up to this point, the left side of the min layer is a 2. Since there is a 7 to the left of the 6, we still have to check the value of the node with value 6, since it will propagate upwards. If, hypothetically, the node with value 7 contained a value less than or equal to 1, then the node could be pruned. This is because the min layer will pick at most 1, so the max layer above will pick 2 and we will not need to check the node with value 6. However, this is \textbf{not the case here}, so we \textbf{do need to expand} the node with value 6.
+\end{enumerate}
+\end{problem}
+
+\end{document}
