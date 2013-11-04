@@ -14,18 +14,18 @@ class Pair(object):
         '''
         Constructor
         '''
-        self.a= a 
+        self.a= a
         self.b = b
-        
+
     def __eq__(self, other):
         if (self.a == other.a) & (self.b ==other.b):
             return True
         if (self.b ==other.a) & (self.a == other.b):
             return True
         return False
-    
+
     def __ne__(self, other):
-        return not self.__eq__(other)        
-    
+        return not self.__eq__(other)
+
     def __str__(self):
-        return str(self.a)+""+str(self.b)    
+        return str(self.a)+""+str(self.b)

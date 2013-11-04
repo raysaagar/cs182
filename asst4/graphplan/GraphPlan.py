@@ -34,20 +34,20 @@ class GraphPlan(object):
         self.createNoOps() #creates noOps that are used to propogate existing propositions from one layer to the next
         self.independent() #creates independent actions list
         self.graphplan() #calls graphplan
-        
- 
-    
 
-    '''the graphplan algorithm. If it's easier for you to write your own code, go for it. But you may use this. The code calls the extract function which you should complete below '''    
+
+
+
+    '''the graphplan algorithm. If it's easier for you to write your own code, go for it. But you may use this. The code calls the extract function which you should complete below '''
     def graphplan(self):
-        
+
         #initialization
         initState = self.initialState
         goalState = self.goal
         level = 0
         self.noGoods = [] #make sure you update noGoods in your backward search!
         self.noGoods.append([])
-        
+
         #create first layer of the graph, note it only has a proposition layer which consists of the initial state.
         propLayerInit = PropositionLayer()
         for prop in initState:
@@ -55,7 +55,7 @@ class GraphPlan(object):
         pgInit = PlanGraph(0, self.independentActions)
         pgInit.setPropositionLayer(propLayerInit)
         self.graph.append(pgInit)
-        
+
         '''while the layer does not contain all of the propositions in the goal state, or some of these propositions are mutex in the layer we, and we have not reached the fixed point, continue expanding the graph'''
         while((self.goalStateNotInPropLayer(goalState, self.graph[level].getPropositionLayer().getPropositions()) | self.goalStateHasMutex(goalState, self.graph[level].getPropositionLayer())) & (self.Fixed(level)==False)):
             self.noGoods.append([])
@@ -63,16 +63,16 @@ class GraphPlan(object):
             pgNext = PlanGraph(level, self.independentActions) #create new PlanGraph object
             pgNext.expand(self.graph[level-1], self.propositions, self.actions) #calls the expand function, which you are implementing in the PlanGraph class
             self.graph.append(copy.deepcopy(pgNext)) #appending the new level to the plan graph
-            
+
         if (self.goalStateNotInPropLayer(goalState, self.graph[level].getPropositionLayer().getPropositions()) | self.goalStateHasMutex(goalState, self.graph[level].getPropositionLayer())):
             print 'could not find a plan'
             return None #this means we stopped the while loop above because we reached a fixed point in the graph. nothing more to do, we failed!
-        
+
         sizeNoGood = len(self.noGoods[level]) #remember size of nogood table
-        
+
         plan = self.extract(self.graph, goalState, level) #try to extract a plan since all of the goal propositions are in current graph level, and are not mutex
-        while(plan==None): #while we didn't extract a plan successfully             
-            level = level+1 
+        while(plan==None): #while we didn't extract a plan successfully
+            level = level+1
             self.noGoods.append([])
             pgNext = PlanGraph(level, self.independentActions) #create next level of the graph by expanding
             pgNext.expand(self.graph[level-1], self.propositions, self.actions) #create next level of the graph by expanding
@@ -91,11 +91,11 @@ class GraphPlan(object):
     def extract(self, Graph, subGoals, level):
         '''YOUR CODE HERE: you should implement the backsearch part of graphplan that tries to extract a plan when all goal propositions exist in a graph plan level. you can write additional helper functions'''
         pass
-    
+
     def gpSearch(self, Graph, subGoals, plan, level):
         '''YOUR CODE HERE: you don't have to use this, but you might consider having this function and calling it from extract. The functions can call each other recursively to find the plan. You don't have to use this'''
         pass
-              
+
         '''helper function that checks whether all propositions of the goal state are in the current graph level'''
     def goalStateNotInPropLayer(self, goalState, propositions):
         for goal in goalState:
@@ -109,17 +109,17 @@ class GraphPlan(object):
                 if propLayer.isMutex(goal1,goal2):
                     return True
         return False
-    
+
     '''checks if we have reached a fixed point, i.e. each level we'll expand would be the same, thus no point in continuting'''
     def Fixed(self, level):
         if level==0:
             return False
-        
+
         if (len(self.graph[level].getPropositionLayer().getPropositions()) == len(self.graph[level-1].getPropositionLayer().getPropositions())):
             if (len(self.graph[level].getPropositionLayer().getMutexProps()) == len(self.graph[level-1].getPropositionLayer().getMutexProps())):
                 return True
         return False
-    
+
     '''creates the noOps that are used to propogate propositions from one layer to the next'''
     def createNoOps(self):
         for prop in self.propositions:
@@ -132,15 +132,15 @@ class GraphPlan(object):
             act = Action(name,precon,add,delete)
             self.actions.append(act)
             prop.addProducer(act)
-    
+
     '''creates a list of independent actions'''
     def independent(self):
         for act1 in self.actions:
             for act2 in self.actions:
                 if(self.independentPair(act1,act2)):
                     self.independentActions.append(Pair(act1,act2))
-                        
-    
+
+
     def independentPair(self, a1, a2):
         if a1==a2:
             return True
@@ -151,20 +151,20 @@ class GraphPlan(object):
             if (a1.isPreCond(prop) | a1.isPosEffect(prop)):
                 return False
         return True
-    
+
     def isIndependent(self, a1, a2):
-        return Pair(a1,a2) in self.independentActions    
-    
+        return Pair(a1,a2) in self.independentActions
+
     '''Helper action that you may want to use when extracting plans, returns true if there are no mutex actions in the plan'''
     def noMutexActionInPlan(self, plan, act, actionLayer):
         for planAct in plan:
             if actionLayer.isMutex(Pair(planAct,act)):
                 return False
-        return True    
-        
+        return True
+
 if __name__ == '__main__':
     domain = 'dwrDomain.txt'
     problem = 'dwrProblem.txt'
     gp = GraphPlan(domain, problem)
-  
-    
+
+

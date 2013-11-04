@@ -23,25 +23,25 @@ class PlanGraph(object):
         self.independentActions = independentActions # a list of the independent actions (this would be the same at each level)
         self.actionLayer = ActionLayer()
         self.propositionLayer = PropositionLayer();
-    
+
     def getPropositionLayer(self):
         return self.propositionLayer
-    
+
     def setPropositionLayer(self, propLayer):
-        self.propositionLayer = propLayer    
-    
+        self.propositionLayer = propLayer
+
     def getActionLayer(self):
         return self.actionLayer
-    
+
     def expand(self, previousLevel, allProps, allActions): #you can change the params the function takes if you like
         '''YOUR CODE HERE'''
         pass
-                    
-                
+
+
     def mutexActions(self, a1, a2, mutexProps):
         '''YOUR CODE HERE: complete code for deciding whether actions a1 and a2 are mutex, given the previous proposition layer. Your exapnd function should call this function'''
         pass
-    
+
     def mutexPropositions(self, prop1, prop2, mutexActions):
         '''YOUR CODE HERE: complete code for deciding whether propositions p1 and p2 are mutex, given the previous proposition layer. Your exapnd function should call this function'''
         pass

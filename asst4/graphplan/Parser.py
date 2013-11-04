@@ -17,7 +17,7 @@ class Parser(object):
         '''
         self.domainFile = domainFile
         self.problemFile = problemFile
-        
+
 
     def parseActionsAndPropositions(self):
         propositions = []
@@ -26,7 +26,7 @@ class Parser(object):
         propositionLine = f.readline()
         words = propositionLine.split(" ")
         for i in range(0, len(words)-1):
-            propositions.append(Proposition(words[i]))         
+            propositions.append(Proposition(words[i]))
         actions = []
         f = open(self.domainFile, 'r')
         line = f.readline()
@@ -48,22 +48,22 @@ class Parser(object):
                 line = f.readline()
                 words = line.split(" ")
                 for i in range(1, len(words)-1):
-                    delete.append(Proposition(words[i]))   
-                act = Action(name,precond,add,delete) 
+                    delete.append(Proposition(words[i]))
+                act = Action(name,precond,add,delete)
                 for prop in add:
                     self.findPropByName(prop, propositions).addProducer(act)
                 actions.append(act)
             line = f.readline()
         return [actions, propositions]
-    
+
     def findPropByName(self, name, propositions):
         for prop in propositions:
             if prop == name:
                 return prop
-        
-   
 
-    
+
+
+
     def pasreProblem(self):
         init = []
         goal = []
@@ -75,6 +75,6 @@ class Parser(object):
         line = f.readline()
         words = line.split(" ")
         for i in range(2, len(words)-1):
-            goal.append(Proposition(words[i]))            
+            goal.append(Proposition(words[i]))
         return [init, goal]
-    
+

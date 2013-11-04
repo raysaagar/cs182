@@ -15,40 +15,40 @@ class Action(object):
         '''
         Constructor
         '''
-        self.pre = pre 
+        self.pre = pre
         self.add = add
         self.delete = delete
         self.name = name
-        
+
     def getPre(self):
         return self.pre
-    
+
     def getAdd(self):
         return self.add
-    
+
     def getDelete(self):
         return self.delete
-    
+
     def getName(self):
         return self.name
-    
+
     def isPreCond(self, prop):
         return prop in self.pre
-    
+
     '''returns true if the proposition prop is a positive effect of the action '''
-    def isPosEffect(self, prop): 
+    def isPosEffect(self, prop):
         return prop in self.add
-    
+
     '''returns true if the proposition prop is a negative effect of the action '''
     def isNegEffect(self, prop):
         return prop in self.delete
-    
+
     def __eq__(self, other):
         return (isinstance(other, self.__class__)
             and self.name == other.name)
 
     def __str__(self):
         return self.name
-    
+
     def __ne__(self, other):
         return not self.__eq__(other)

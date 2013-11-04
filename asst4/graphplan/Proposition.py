@@ -14,20 +14,20 @@ class Proposition(object):
         Constructor
         '''
         self.name = name
-        self.producers = []        
-        
+        self.producers = []
+
     def getName(self):
         return self.name
-    
+
     def getProducers(self):
         return self.producers
 
     def setProducers(self, producers):
         self.producers = producers
-    
+
     def addProducer(self, producer):
-            self.producers.append(producer)    
-    
+            self.producers.append(producer)
+
     def __eq__(self, other):
         return (isinstance(other, self.__class__)
             and self.name == other.name)
@@ -37,4 +37,3 @@ class Proposition(object):
 
     def __ne__(self, other):
         return not self.__eq__(other)
-        

@@ -17,26 +17,26 @@ class PropositionLayer(object):
         '''
         self.propositions = []
         self.mutexPropositions = []
-        
+
     def addProposition(self, proposition):
         self.propositions.append(proposition)
-        
+
     def removePropositions(self, proposition):
         self.actions.remove(proposition)
-        
+
     def getPropositions(self):
-        return self.propositions        
-    
+        return self.propositions
+
     def addMutexProp(self, p1, p2):
         self.mutexPropositions.append(Pair(p1,p2))
-    
+
     ''' returns true if proposition p1 and proposition p2 are mutex at this layer'''
     def isMutex(self, p1, p2):
-        return Pair(p1,p2) in self.mutexPropositions    
-    
+        return Pair(p1,p2) in self.mutexPropositions
+
     def getMutexProps(self):
         return self.mutexPropositions
-    
+
     '''returns true if all propositions that are preconditions of the action action exist in this layer (i.e. the action can be applied)'''
     def allPrecondsInLayer(self, action):
         for pre in action.getPre():
@@ -46,7 +46,7 @@ class PropositionLayer(object):
             for pre2 in action.getPre():
                 if Pair(pre1,pre2) in self.mutexPropositions:
                     return False
-        
+
         return True
 
     def __eq__(self, other):
@@ -55,4 +55,4 @@ class PropositionLayer(object):
 
     def __ne__(self, other):
         return not self.__eq__(other)
-            
+
