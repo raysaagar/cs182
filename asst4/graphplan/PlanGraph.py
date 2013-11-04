@@ -65,12 +65,22 @@ class PlanGraph(object):
         P_k.addMutexProp(p1, p2) for p1, p2 in combinations(P_k.getPropositions(), 2)\
             if p1 != p2\
             and self.mutexPropositions(p1, p2, A_k.getMutexActions())
-        pass
+        #pass
 
     def mutexActions(self, a1, a2, mutexProps):
         '''YOUR CODE HERE: complete code for deciding whether actions a1 and a2 are mutex, given the previous proposition layer. Your exapnd function should call this function'''
-        pass
+        if Pair(a1,a2) not in self.independentActions:
+            return True
+        for p1 in a1.getPre():
+            for p2 in a2.getPre():
+                if Pair(p1,p2) in mutexProps:
+                    return True
+        return False
 
     def mutexPropositions(self, prop1, prop2, mutexActions):
         '''YOUR CODE HERE: complete code for deciding whether propositions p1 and p2 are mutex, given the previous proposition layer. Your exapnd function should call this function'''
-        pass
+        for a1 in prop1.getProducers():
+            for a2 in prop2.getProducers():
+                if Pair(a1,a2) not in mutexActions:
+                    return False
+        return True

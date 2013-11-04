@@ -6,7 +6,8 @@ Created on Oct 20, 2013
 
 class Proposition(object):
     '''
-    A class for representing propositions. Each proposition object has a name and a list of producers, that is the actions that have the proposition on their add list
+    A class for representing propositions. Each proposition object has a name and a list of producers,
+    that is the actions that have the proposition on their add list
     '''
 
     def __init__(self,name):
@@ -26,7 +27,7 @@ class Proposition(object):
         self.producers = producers
 
     def addProducer(self, producer):
-            self.producers.append(producer)
+        self.producers.append(producer)
 
     def __eq__(self, other):
         return (isinstance(other, self.__class__)

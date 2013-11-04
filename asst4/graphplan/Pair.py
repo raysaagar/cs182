@@ -6,7 +6,8 @@ Created on Oct 20, 2013
 
 class Pair(object):
     '''
-    A utility class to represent pairs (ordering of the objects in the pair does not matter). It is used to represent mutexes (for both actions and propositions)
+    A utility class to represent pairs (ordering of the objects in the pair does not matter).
+    It is used to represent mutexes (for both actions and propositions)
     '''
 
 

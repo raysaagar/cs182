@@ -7,7 +7,8 @@ from Pair import Pair
 
 class PropositionLayer(object):
     '''
-    A class for an PropositionLayer  in a level of the graph. The layer contains a list of propositions (Proposition objects) and a list of mutex propositions (Pair objects)
+    A class for an PropositionLayer  in a level of the graph.
+    The layer contains a list of propositions (Proposition objects) and a list of mutex propositions (Pair objects)
     '''
 
 
