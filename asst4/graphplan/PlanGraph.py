@@ -48,9 +48,13 @@ class PlanGraph(object):
         A_k = self.getActionLayer()
 
         # this is for A_k (actions in next layer)
-        A_k.addAction(a) for a in allActions \
+        for a in allActions:
             if (all(p in previousProps for p in a.getPre()) \
-            and not any(previousPropLayer.isMutex(p1, p2) for p1, p2 in combinations(a.getPre(), 2)))
+            and not any(previousPropLayer.isMutex(p1, p2) for p1, p2 in combinations(a.getPre(), 2))):
+                A_k.addAction(a)
+
+        # A_k.addAction(a) for a in allActions if (all(p in previousProps for p in a.getPre()) \
+        #    and not any(previousPropLayer.isMutex(p1, p2) for p1, p2 in combinations(a.getPre(), 2)))
         # this is for mA_k (mutex actions in next layer)
         currentActions = A_k.getActions()
         A_k.addMutexActions(a1, a2) for a1, a2 in combinations(currentActions, 2)\

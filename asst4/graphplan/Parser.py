@@ -61,9 +61,6 @@ class Parser(object):
             if prop == name:
                 return prop
 
-
-
-
     def pasreProblem(self):
         init = []
         goal = []
