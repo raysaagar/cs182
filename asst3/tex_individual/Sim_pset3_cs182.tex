@@ -52,4 +52,91 @@
 
 \maketitle
 
+\textbf{Facts / Rules}
+\begin{enumerate}
+\item If someone is a man, he is mortal (All men are mortal).
+
+$\forall x Man(x) \Rightarrow Mortal(x)$
+
+\item Every man has exactly one (biological) mother. For every $x$, if $x$ is a man, then there exists a unique $y$, where $y$ is a woman and $y$ is the mother of $x$.
+
+$\forall x Man(x) \Rightarrow \exists! y (Woman(y) \land MotherOf(y, x))$
+
+\item If a woman is a mother of another person, then that other person has a mother.
+
+$\forall x \exists y MotherOf(x, y) \Rightarrow HasMother(y)$
+
+\item If someone is a mother, she is a woman (all mothers are women).
+
+$\forall x Mother(x) \Rightarrow Woman(x)$
+
+\item A maternal grandmother is the mother of a mother. For every $x$, if $x$ is a (maternal) grandmother, then there exists a $y$ who is a mother, where $x$ is the mother of $y$.
+
+$\forall x MaternalGrandmother(x) \Rightarrow (\exists y MotherOf(x, y) \land Mother(y))$
+
+\item A grandmother is the mother of a mother or a father. For every $x$, if $x$ is a grandmother (maternal or paternal), then there exists either a $y$ who is a mother, where $x$ is the mother of $y$, or there exists a $z$ who is a father, where $x$ is the mother of $z$.
+
+$\forall x Grandmother(x) \Rightarrow (\exists y MotherOf(x,y) \land Mother(y)) \lor (\exists z MotherOf(x,z) \land Father(z))$
+
+\item For all men with a mother, he has a (biological) father.
+
+$\forall x (Man(x) \land HasMother(x)) \Rightarrow HasFather(x)$ 
+
+\item If someone is a father, he is a man (all fathers are men).
+
+$\forall x Father(x) \Rightarrow Man(x)$
+
+\item If someone is a mother of someone else, they are related.
+
+$\forall x \forall y MotherOf(x,y) \Rightarrow Related(x,y)$
+
+\item If two people are married, they are not related.
+
+$\forall x \forall y Married(x,y) \Rightarrow \lnot Related(x,y)$
+
+\item If someone is a father of someone else, they are related.
+
+$\forall x \forall y FatherOf(x,y) \Rightarrow Related(x,y)$
+
+\item If a man has a father, the man is a son.
+
+$\forall x HasFather(x) \Rightarrow IsSon(x)$
+
+\end{enumerate}
+
+\textbf{Another fact we can prove:}
+If someone is a father, he is a son.
+
+$\forall x Father(x) \Rightarrow IsSon(x)$
+
+\textbf{Proof}: 
+
+If someone is a father, he is a man (all fathers are men).
+
+$\forall x Father(x) \Rightarrow Man(x)$
+
+Every man has exactly one (biological) mother.
+
+$\forall x Man(x) \Rightarrow \exists! y (Woman(y) \land MotherOf(y, x))$
+
+If a woman is a mother of another person, then that other person has a mother.
+
+$\forall x \exists y MotherOf(x, y) \Rightarrow HasMother(y)$
+
+So, every man has a mother:
+
+$\forall x Man(x) \Rightarrow HasMother(x)$
+
+For all men with a mother, he has a (biological) father.
+
+$\forall x (Man(x) \land HasMother(x)) \Rightarrow HasFather(x)$ 
+
+Therefore, every man has a father:
+
+$\forall x Man(x) \Rightarrow HasFather(x)$
+
+If a man has a father, the man is a son.
+
+$\forall x HasFather(x) \Rightarrow IsSon(x)$
+
 \end{document}

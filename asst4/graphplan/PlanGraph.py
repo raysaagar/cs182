@@ -8,6 +8,7 @@ from ActionLayer import ActionLayer
 from Pair import Pair
 from Proposition import Proposition
 from PropositionLayer import PropositionLayer
+from itertools import combinations
 
 class PlanGraph(object):
     '''
@@ -33,10 +34,38 @@ class PlanGraph(object):
     def getActionLayer(self):
         return self.actionLayer
 
+    # expands G_(k-1), graph from previous layer
     def expand(self, previousLevel, allProps, allActions): #you can change the params the function takes if you like
         '''YOUR CODE HERE'''
-        pass
+        # gets things first so we don't get them over and over in our list comprehensions
+        previousPropLayer = previousLevel.getPropositionLayer()
+        previousActionLayer = previousLevel.getActionLayer()
+        previousActions = previousActionLayer.getActions()
 
+        previousProps = previousPropLayer.getPropositions()
+        previousMutexProps = previousPropLayer.getMutexProps()
+
+        A_k = self.getActionLayer()
+
+        # this is for A_k (actions in next layer)
+        A_k.addAction(a) for a in allActions \
+            if (all(p in previousProps for p in a.getPre()) \
+            and not any(previousPropLayer.isMutex(p1, p2) for p1, p2 in combinations(a.getPre(), 2)))
+        # this is for mA_k (mutex actions in next layer)
+        currentActions = A_k.getActions()
+        A_k.addMutexActions(a1, a2) for a1, a2 in combinations(currentActions, 2)\
+            if a1 != a2\
+            and previousLevel.mutexActions(a1, a2, previousMutexProps)
+
+        # this is for Pk (propositions in next layer)
+        P_k = self.getPropositionLayer()
+        P_k.addProposition(p) for p in allProps if any(a.isPosEffect(p) for a in currentActions)
+        # this is for mPk (mutex propositions in next layer)
+        A_k = self.getActionLayer()
+        P_k.addMutexProp(p1, p2) for p1, p2 in combinations(P_k.getPropositions(), 2)\
+            if p1 != p2\
+            and self.mutexPropositions(p1, p2, A_k.getMutexActions())
+        pass
 
     def mutexActions(self, a1, a2, mutexProps):
         '''YOUR CODE HERE: complete code for deciding whether actions a1 and a2 are mutex, given the previous proposition layer. Your exapnd function should call this function'''
