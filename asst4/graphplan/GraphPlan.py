@@ -89,6 +89,7 @@ class GraphPlan(object):
         return plan
 
     def extract(self, Graph, subGoals, level):
+        ######### TO FIX #########
         '''YOUR CODE HERE: you should implement the backsearch part of graphplan that tries to extract a plan when all goal propositions exist in a graph plan level. you can write additional helper functions'''
         print subGoals
         exit(1)
@@ -109,6 +110,7 @@ class GraphPlan(object):
         pass
 
     def gpSearch(self, Graph, subGoals, plan, level):
+        ######### TO FIX #########
         '''YOUR CODE HERE: you don't have to use this, but you might consider having this function and calling it from extract. The functions can call each other recursively to find the plan. You don't have to use this'''
         if subGoals == []:
             newPlan = extract(Graph, plan.getActions().getPre(), level-1)

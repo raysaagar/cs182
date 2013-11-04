@@ -47,28 +47,41 @@ class PlanGraph(object):
 
         A_k = self.getActionLayer()
 
-        # this is for A_k (actions in next layer)
+        ###### this is for A_k (actions in next layer)
         for a in allActions:
-            if (all(p in previousProps for p in a.getPre()) \
-            and not any(previousPropLayer.isMutex(p1, p2) for p1, p2 in combinations(a.getPre(), 2))):
+            if (all(p in previousProps for p in a.getPre()) 
+                and not any(previousPropLayer.isMutex(p1, p2) for p1, p2 in combinations(a.getPre(), 2))):
                 A_k.addAction(a)
 
         # A_k.addAction(a) for a in allActions if (all(p in previousProps for p in a.getPre()) \
         #    and not any(previousPropLayer.isMutex(p1, p2) for p1, p2 in combinations(a.getPre(), 2)))
-        # this is for mA_k (mutex actions in next layer)
-        currentActions = A_k.getActions()
-        A_k.addMutexActions(a1, a2) for a1, a2 in combinations(currentActions, 2)\
-            if a1 != a2\
-            and previousLevel.mutexActions(a1, a2, previousMutexProps)
 
-        # this is for Pk (propositions in next layer)
+        ###### this is for mA_k (mutex actions in next layer)
+        currentActions = A_k.getActions()
+        for a1, a2 in combinations(currentActions, 2):
+            if a1 != a2 and previousLevel.mutexActions(a1, a2, previousMutexProps):
+                A_k.addMutexActions(a1, a2)
+
+        #A_k.addMutexActions(a1, a2) for a1, a2 in combinations(currentActions, 2)\
+        #    if a1 != a2\
+        #    and previousLevel.mutexActions(a1, a2, previousMutexProps)
+
+        ###### this is for Pk (propositions in next layer)
         P_k = self.getPropositionLayer()
-        P_k.addProposition(p) for p in allProps if any(a.isPosEffect(p) for a in currentActions)
-        # this is for mPk (mutex propositions in next layer)
+        for p in allProps:
+            if any(a.isPosEffect(p) for a in currentActions):
+                P_k.addProposition(p)
+        #P_k.addProposition(p) for p in allProps if any(a.isPosEffect(p) for a in currentActions)
+        
+        ###### this is for mPk (mutex propositions in next layer)
         A_k = self.getActionLayer()
-        P_k.addMutexProp(p1, p2) for p1, p2 in combinations(P_k.getPropositions(), 2)\
-            if p1 != p2\
-            and self.mutexPropositions(p1, p2, A_k.getMutexActions())
+        for p1, p2 in combinations(P_k.getPropositions(), 2):
+            if p1 != p2 and self.mutexPropositions(p1, p2, A_k.getMutexActions()):
+                P_k.addMutexProp(p1, p2)
+        
+        #P_k.addMutexProp(p1, p2) for p1, p2 in combinations(P_k.getPropositions(), 2)\
+        #    if p1 != p2\
+        #    and self.mutexPropositions(p1, p2, A_k.getMutexActions())
         #pass
 
     def mutexActions(self, a1, a2, mutexProps):
