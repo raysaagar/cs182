@@ -115,7 +115,10 @@ class GraphPlan(object):
         '''YOUR CODE HERE: you don't have to use this, but you might consider having this function and calling it from extract. The functions can call each other recursively to find the plan. You don't have to use this'''
         print len(subGoals)
         if not subGoals:
-            newPlan = self.extract(Graph, [p.getPre() for p in plan], level-1)
+            newSubGoals = []
+            for p in plan:
+                newSubGoals += p.getPre()
+            newPlan = self.extract(Graph, newSubGoals, level-1)
             if not newPlan:
                 print "returned none"
                 return None
