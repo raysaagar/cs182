@@ -1,0 +1,22 @@
+Saagar Deshpande
+Collaboration: I discussed various aspect of this assignment with Brandon Sim and Louis Li, but wrote all code segments myself.
+
+
+1) Answer Question 1 on DFS from the website implementation description: “The Pac-Man board
+will show an overlay of the states explored, and the order in which they were explored (brighter
+red means earlier exploration). Is the exploration order what you would have expected? Does
+Pac-Man actually go to all the explored squares on his way to the goal?”
+
+>> The exploration order makes sense if we assume that WEST has priority over SOUTH in the directions. Running python pacman.py -l mediumMaze -p SearchAgent, we see pacman explores the first path all the way to the end. The order of exploration is expected for a DFS, which explores all possible paths to the maximum depth. However, in the regular context of pacman, DFS doesn't guarantee the best solution, so in this sense, the exploration order is not the one expected. Finally, pacman doesn't actually go to all of the explored squares on his way to the goal.
+
+2) With regards to question 4 in the implementation: Run the A* agent on openMaze. How do A* and UCS perform with this configuration?
+
+A* agent expands 145 nodes while UCS expands 683 nodes. A* using the Manhatten Distance heuristic performs better, with fewer nodes expanded and faster speed.
+
+3) Describe a real world problem for which you would want to find an optimal solution. Describe a
+real-world problem for which you would prefer finding a solution quickly, even if it is
+suboptimal.
+
+Solving a mapquest request is an optimal solution. We can use heuristics and A* to find the best path between two points such that the distance travelled is minimized. This is useful for when people want to get from point A to point B. A* can provide us with optimal results in this situation.
+
+Solving the Rubix's cube is a problem for which we would prefer finding a solution quickly, even if its suboptimal. We don't want to search the entire problem's state space to find the best solution as that might be time and memory intensive. Here, a suboptimal solution is good enough to get us a result, even if more moves are required, because we'd prefer to solve the cube through a local search, which is just good enough.
