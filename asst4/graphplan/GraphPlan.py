@@ -97,10 +97,11 @@ class GraphPlan(object):
         #print self.noGoods[level]
         #if set(subGoals) in [set(x) for x in self.noGoods[level]]:
         if all(g in self.noGoods[level] for g in subGoals):
-            print "subgoals NO GOOD BROH"
+            #print "subgoals NO GOOD BROH"
             return None
         plan = self.gpSearch(Graph, subGoals, [], level)
-        if plan:
+        #if plan:
+        if plan != None:
             return plan
         self.noGoods[level] = self.noGoods[level] + subGoals
         return None
@@ -114,14 +115,16 @@ class GraphPlan(object):
         ######### TO FIX #########
         #print subGoals
         '''YOUR CODE HERE: you don't have to use this, but you might consider having this function and calling it from extract. The functions can call each other recursively to find the plan. You don't have to use this'''
-        print len(subGoals)
-        if not subGoals:
+        #print len(subGoals)
+        if subGoals == []:
+        #if not subGoals:
             newSubGoals = []
             for p in plan:
                 newSubGoals += p.getPre()
             newPlan = self.extract(Graph, newSubGoals, level-1)
-            if not newPlan:
-                print "returned none"
+            #if not newPlan:
+            if newPlan == None:
+                #print "returned none"
                 return None
             else:
                 #print newPlan
@@ -133,14 +136,16 @@ class GraphPlan(object):
         and not any(Graph[level].getActionLayer().isMutex(Pair(a, x)) for x in plan))]
         #print "HERE"
         #print providers
-        if not providers:
+        #if not providers:
+        if providers == []:
             return None
 
         for a in providers:
         #a = choice(providers)
             result = self.gpSearch(Graph, [item for item in subGoals if item not in a.getAdd()], plan + [a], level)
             #result = self.gpSearch(Graph, [p for p in subGoals if not a.isPosEffect(p)], plan + [a], level)
-            if result:
+            #if result:
+            if result != None:
                 return result
         return None
 

@@ -34,6 +34,9 @@ class PlanGraph(object):
     def getActionLayer(self):
         return self.actionLayer
 
+    def setActionLayer(self, actionLayer):
+        self.actionLayer = actionLayer
+
     # expands G_(k-1), graph from previous layer
     def expand(self, previousLevel, allProps, allActions): #you can change the params the function takes if you like
         '''YOUR CODE HERE'''
@@ -45,8 +48,8 @@ class PlanGraph(object):
         previousProps = previousPropLayer.getPropositions()
         previousMutexProps = previousPropLayer.getMutexProps()
 
-        A_k = self.getActionLayer()
-
+        #A_k = self.getActionLayer()
+        A_k = ActionLayer()
         ###### this is for A_k (actions in next layer)
         for a in allActions:
             if (all(p in previousProps for p in a.getPre()) 
@@ -62,12 +65,14 @@ class PlanGraph(object):
             if a1 != a2 and previousLevel.mutexActions(a1, a2, previousMutexProps):
                 A_k.addMutexActions(a1, a2)
 
+        self.setActionLayer(A_k)
         #A_k.addMutexActions(a1, a2) for a1, a2 in combinations(currentActions, 2)\
         #    if a1 != a2\
         #    and previousLevel.mutexActions(a1, a2, previousMutexProps)
 
         ###### this is for Pk (propositions in next layer)
-        P_k = self.getPropositionLayer()
+        #P_k = self.getPropositionLayer()
+        P_k = PropositionLayer()
         for p in allProps:
             if any(a.isPosEffect(p) for a in currentActions):
                 P_k.addProposition(p)
@@ -78,7 +83,7 @@ class PlanGraph(object):
         for p1, p2 in combinations(P_k.getPropositions(), 2):
             if p1 != p2 and self.mutexPropositions(p1, p2, A_k.getMutexActions()):
                 P_k.addMutexProp(p1, p2)
-        
+        self.setPropositionLayer(P_k)
         #P_k.addMutexProp(p1, p2) for p1, p2 in combinations(P_k.getPropositions(), 2)\
         #    if p1 != p2\
         #    and self.mutexPropositions(p1, p2, A_k.getMutexActions())
