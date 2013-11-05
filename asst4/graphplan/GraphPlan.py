@@ -96,7 +96,8 @@ class GraphPlan(object):
             return []
         #print self.noGoods[level]
         #if set(subGoals) in [set(x) for x in self.noGoods[level]]:
-        if subGoals in [x for x in self.noGoods[level]]:
+        if all(g in self.noGoods[level] for g in subGoals):
+            print "subgoals NO GOOD BROH"
             return None
         plan = self.gpSearch(Graph, subGoals, [], level)
         if plan:
@@ -123,8 +124,8 @@ class GraphPlan(object):
                 print "returned none"
                 return None
             else:
-                print newPlan
-                print plan
+                #print newPlan
+                #print plan
                 return newPlan + plan
         #print "HI"
         p = choice(subGoals)
@@ -138,6 +139,7 @@ class GraphPlan(object):
         for a in providers:
         #a = choice(providers)
             result = self.gpSearch(Graph, [item for item in subGoals if item not in a.getAdd()], plan + [a], level)
+            #result = self.gpSearch(Graph, [p for p in subGoals if not a.isPosEffect(p)], plan + [a], level)
             if result:
                 return result
         return None
