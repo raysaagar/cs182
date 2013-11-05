@@ -96,8 +96,10 @@ class PlanGraph(object):
 
     def mutexPropositions(self, prop1, prop2, mutexActions):
         '''YOUR CODE HERE: complete code for deciding whether propositions p1 and p2 are mutex, given the previous proposition layer. Your exapnd function should call this function'''
-        for a1 in prop1.getProducers():
-            for a2 in prop2.getProducers():
+        for a1 in [p for p in prop1.getProducers() if p in self.getActionLayer().getActions()]:
+        #for a1 in prop1.getProducers():
+            #for a2 in prop2.getProducers():
+            for a2 in [p for p in prop2.getProducers() if  p in self.getActionLayer().getActions()]:
                 if Pair(a1,a2) not in mutexActions:
                     return False
         return True

@@ -9,6 +9,7 @@ from PropositionLayer import PropositionLayer
 from PlanGraph import PlanGraph
 from Parser import Parser
 from Action import Action
+from random import choice
 
 
 class GraphPlan(object):
@@ -91,13 +92,14 @@ class GraphPlan(object):
     def extract(self, Graph, subGoals, level):
         ######### TO FIX #########
         '''YOUR CODE HERE: you should implement the backsearch part of graphplan that tries to extract a plan when all goal propositions exist in a graph plan level. you can write additional helper functions'''
-
         if level == 0:
             return []
-        if set(subGoals) in [set(x) for x in self.noGoods[level]]:
+        #print self.noGoods[level]
+        #if set(subGoals) in [set(x) for x in self.noGoods[level]]:
+        if subGoals in [x for x in self.noGoods[level]]:
             return None
-        plan = gpSearch(Graph, subGoals, [], level)
-        if plan != None:
+        plan = self.gpSearch(Graph, subGoals, [], level)
+        if plan:
             return plan
         self.noGoods[level] = self.noGoods[level] + subGoals
         return None
@@ -105,18 +107,39 @@ class GraphPlan(object):
         pass
 
     def gpSearch(self, Graph, subGoals, plan, level):
+        # graph is a list of planGraphs
+        #subGoals is a list of propositions
+        # plan is a list of actions
         ######### TO FIX #########
+        #print subGoals
         '''YOUR CODE HERE: you don't have to use this, but you might consider having this function and calling it from extract. The functions can call each other recursively to find the plan. You don't have to use this'''
-        if subGoals == []:
-            newPlan = extract(Graph, plan.getActions().getPre(), level-1)
-            exit(1)
+        print len(subGoals)
+        if not subGoals:
+            newPlan = self.extract(Graph, [p.getPre() for p in plan], level-1)
             if not newPlan:
+                print "returned none"
                 return None
             else:
-                return newPlan | plan
-        pass
+                print newPlan
+                print plan
+                return newPlan + plan
+        #print "HI"
+        p = choice(subGoals)
+        providers = [a for a in Graph[level].getActionLayer().getActions() if (a.isPosEffect(p)
+        and not any(Graph[level].getActionLayer().isMutex(Pair(a, x)) for x in plan))]
+        #print "HERE"
+        #print providers
+        if not providers:
+            return None
 
-        '''helper function that checks whether all propositions of the goal state are in the current graph level'''
+        for a in providers:
+        #a = choice(providers)
+            result = self.gpSearch(Graph, [item for item in subGoals if item not in a.getAdd()], plan + [a], level)
+            if result:
+                return result
+        return None
+
+    '''helper function that checks whether all propositions of the goal state are in the current graph level'''
     def goalStateNotInPropLayer(self, goalState, propositions):
         for goal in goalState:
             if goal not in propositions:
