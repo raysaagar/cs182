@@ -90,17 +90,13 @@ class GraphPlan(object):
         return plan
 
     def extract(self, Graph, subGoals, level):
-        ######### TO FIX #########
         '''YOUR CODE HERE: you should implement the backsearch part of graphplan that tries to extract a plan when all goal propositions exist in a graph plan level. you can write additional helper functions'''
         if level == 0:
             return []
-        #print self.noGoods[level]
         #if set(subGoals) in [set(x) for x in self.noGoods[level]]:
         if all(g in self.noGoods[level] for g in subGoals):
-            #print "subgoals NO GOOD BROH"
             return None
         plan = self.gpSearch(Graph, subGoals, [], level)
-        #if plan:
         if plan != None:
             return plan
         self.noGoods[level] = self.noGoods[level] + subGoals
@@ -110,41 +106,26 @@ class GraphPlan(object):
 
     def gpSearch(self, Graph, subGoals, plan, level):
         # graph is a list of planGraphs
-        #subGoals is a list of propositions
+        # subGoals is a list of propositions
         # plan is a list of actions
-        ######### TO FIX #########
-        #print subGoals
         '''YOUR CODE HERE: you don't have to use this, but you might consider having this function and calling it from extract. The functions can call each other recursively to find the plan. You don't have to use this'''
-        #print len(subGoals)
         if subGoals == []:
-        #if not subGoals:
             newSubGoals = []
             for p in plan:
                 newSubGoals += p.getPre()
             newPlan = self.extract(Graph, newSubGoals, level-1)
-            #if not newPlan:
             if newPlan == None:
-                #print "returned none"
                 return None
             else:
-                #print newPlan
-                #print plan
                 return newPlan + plan
-        #print "HI"
         p = choice(subGoals)
         providers = [a for a in Graph[level].getActionLayer().getActions() if (a.isPosEffect(p)
         and not any(Graph[level].getActionLayer().isMutex(Pair(a, x)) for x in plan))]
-        #print "HERE"
-        #print providers
-        #if not providers:
         if providers == []:
             return None
 
         for a in providers:
-        #a = choice(providers)
             result = self.gpSearch(Graph, [item for item in subGoals if item not in a.getAdd()], plan + [a], level)
-            #result = self.gpSearch(Graph, [p for p in subGoals if not a.isPosEffect(p)], plan + [a], level)
-            #if result:
             if result != None:
                 return result
         return None
