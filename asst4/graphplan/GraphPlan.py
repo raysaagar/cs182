@@ -119,6 +119,7 @@ class GraphPlan(object):
             else:
                 return newPlan + plan
         p = choice(subGoals)
+        #p = subGoals[0]
         providers = [a for a in Graph[level].getActionLayer().getActions() if (a.isPosEffect(p)
         and not any(Graph[level].getActionLayer().isMutex(Pair(a, x)) for x in plan))]
         if providers == []:
