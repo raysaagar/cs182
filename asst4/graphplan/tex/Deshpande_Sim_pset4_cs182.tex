@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+%Mathematical TeX packages from the AMS
+\usepackage{amssymb,amsmath,amsthm} 
+%geometry (sets margin) 
+\usepackage[margin=1.25in]{geometry}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\def\ci{\perp\!\!\!\perp}
+%=============================================================
+%Redefining the 'section' environment as a 'problem' with dots at the end
+
+
+\makeatletter
+\newenvironment{problem}{\@startsection
+       {section}
+       {1}
+       {-.2em}
+       {-3.5ex plus -1ex minus -.2ex}
+       {2.3ex plus .2ex}
+       {\pagebreak[3] %basic widow-orphan matching
+       \large\bf\noindent{Problem }
+       }
+       }
+       {%\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+       \begin{center}\large\bf \ldots\ldots\ldots\end{center}}
+\makeatother
+
+
+%=============================================================
+%Fancy-header package to modify header/page numbering 
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Saagar Deshpande, Brandon Sim}
+\chead{} 
+\rhead{\thepage} 
+\lfoot{\small Computer Science 182} 
+\cfoot{} 
+\rfoot{\footnotesize Problem Set 4} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+\setlength\voffset{-0.25in}
+\setlength\textheight{648pt}
+\setlength\parindent{0pt}
+%=============================================================
+%Contents of problem set
+
+\begin{document}
+\date{November 5, 2013}
+\title{Computer Science 182: Problem Set 4, Computational}
+\author{Saagar Deshpande, Brandon Sim}
+
+\maketitle
+
+\section{Part A: Graphplan}
+\begin{enumerate}
+\item Here, we implemented the missing functions in GraphPlan and PlanGraph. Please see the code for the implementation.
+
+\item \begin{enumerate}[(a)]
+\item
+
+\item
+
+\item
+\end{enumerate}
+\end{enumerate}
+
+\section{Part B: Graphplan as a heuristic for A*}
+\end{document}
