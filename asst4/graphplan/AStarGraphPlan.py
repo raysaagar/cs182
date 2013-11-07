@@ -5,6 +5,8 @@ from Parser import Parser
 from PlanGraph import PlanGraph
 from Pair import Pair
 from Action import Action
+from RelaxedGraphPlan import RelaxedGraphPlan
+
 
 class DWRProblem:
   def __init__(self, domain, problem):
@@ -15,6 +17,10 @@ class DWRProblem:
     prob = p.pasreProblem()
     self.initialState = prob[0]
     self.goal = prob[1]
+
+    self.relaxedActions = []
+    for a in self.actions:
+      self.relaxedActions.append(Action(a.getName(), a.getPre(), a.getAdd(), []))
 
   def getStartState(self):
     return self.initialState
@@ -31,7 +37,7 @@ class DWRProblem:
       # this applies an action onto state
       newState = state + [prep for prep in action.getAdd() if prep not in state]
       newState = [prep for prep in newState if prep not in action.getDelete()]
-      successors.append((newState, action, 0))
+      successors.append((newState, action, 1))
     return successors
 
   def getCostOfActions(self, movelist):
@@ -42,7 +48,12 @@ def graphPlanHeuristic(state, problem=None):
   A heuristic function estimates the cost from the current state to the nearest
   goal in the provided SearchProblem.  This heuristic is trivial.
   """
-  return 0
+  # domainKB is the same as in GraphPlan
+  # prob is a list [initialState, goalState]
+  relaxed_graph_plan = RelaxedGraphPlan([problem.relaxedActions, problem.propositions], 
+    [state, problem.goal])
+  #print relaxed_graph_plan.level
+  return relaxed_graph_plan.level
 
 def parameterizedSearch(problem, FrontierDataStructure, priorityFunction=None, heuristic=None):
   """
