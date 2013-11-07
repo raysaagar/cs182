@@ -58,7 +58,7 @@ class RelaxedGraphPlan(object):
 
         if (self.goalStateNotInPropLayer(goalState, self.graph[level].getPropositionLayer().getPropositions()) | self.goalStateHasMutex(goalState, self.graph[level].getPropositionLayer())):
             print 'could not find a plan'
-            return None #this means we stopped the while loop above because we reached a fixed point in the graph. nothing more to do, we failed!
+            return None #this means we stopped the while loop abovegpus because we reached a fixed point in the graph. nothing more to do, we failed!
 
         sizeNoGood = len(self.noGoods[level]) #remember size of nogood table
 
@@ -78,8 +78,8 @@ class RelaxedGraphPlan(object):
         print "final plan"
         #for act in plan:
         #    print act
-        #return plan
-        return level
+        return len(plan)
+        #return level
 
     def extract(self, Graph, subGoals, level):
         '''YOUR CODE HERE: you should implement the backsearch part of graphplan that tries to extract a plan when all goal propositions exist in a graph plan level. you can write additional helper functions'''
