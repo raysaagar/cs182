@@ -1,7 +1,7 @@
 '''
 Created on Oct 20, 2013
 
-@author: Ofra
+@author: brandon,saagar
 '''
 from Pair import Pair
 import copy
@@ -11,32 +11,24 @@ from Parser import Parser
 from Action import Action
 from random import choice
 
-class GraphPlan(object):
+class RelaxedGraphPlan(object):
     '''
     A class for initializing and running the graphplan algorithm
     '''
-
-
-    def __init__(self,domain, problem):
+    def __init__(self, domainKB, prob):
         '''
         Constructor
         '''
         self.independentActions = []
         self.noGoods=[]
         self.graph = []
-        p = Parser(domain, problem)
-        domainKB = p.parseActionsAndPropositions();
         self.actions = domainKB[0]
         self.propositions = domainKB[1]
-        prob = p.pasreProblem()
         self.initialState = prob[0]
         self.goal = prob[1]
         self.createNoOps() #creates noOps that are used to propogate existing propositions from one layer to the next
         self.independent() #creates independent actions list
-        self.graphplan() #calls graphplan
-
-
-
+        #self.graphplan() #calls graphplan
 
     '''the graphplan algorithm. If it's easier for you to write your own code, go for it. But you may use this. The code calls the extract function which you should complete below '''
     def graphplan(self):
@@ -84,9 +76,10 @@ class GraphPlan(object):
                     return None
                 sizeNoGood=len(self.noGoods[level]) #we didn't fail yet! update size of no good
         print "final plan"
-        for act in plan:
-            print act
-        return plan
+        #for act in plan:
+        #    print act
+        #return plan
+        return level
 
     def extract(self, Graph, subGoals, level):
         '''YOUR CODE HERE: you should implement the backsearch part of graphplan that tries to extract a plan when all goal propositions exist in a graph plan level. you can write additional helper functions'''
