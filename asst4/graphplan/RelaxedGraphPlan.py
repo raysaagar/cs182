@@ -6,7 +6,6 @@ Created on Oct 20, 2013
 from Pair import Pair
 from copy import deepcopy
 from PropositionLayer import PropositionLayer
-from PlanGraph import PlanGraph
 from Parser import Parser
 from Action import Action
 from random import choice

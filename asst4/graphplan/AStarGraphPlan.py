@@ -90,7 +90,14 @@ def parameterizedSearch(problem, FrontierDataStructure, priorityFunction=None, h
       return actionHistory + [action]
 
     for (successor, nextAction, stepCost) in problem.getSuccessors(node):
-      if successor not in visited: ## CHANGE THIS LATER (propositions could be in different order)
+      #if successor not in visited: ## CHANGE THIS LATER (propositions could be in different order)
+      #if not any([s in v for s in successor for v in visited]):
+      contained = False
+      for v in visited:
+        if all([s in v for s in successor]):
+          contained = True
+
+      if not contained:
         visited.append(successor)
         frontier.push((successor, nextAction, currentCost + stepCost, 
           actionHistory + [action] if action else []))
@@ -101,10 +108,13 @@ def aStarSearch(problem, heuristic=graphPlanHeuristic):
   return parameterizedSearch(problem, util.PriorityQueueWithFunction, None, heuristic)
 
 if __name__ == '__main__':
-  domain = 'dwrDomain.txt'
-  problem = 'dwrProblem.txt'
+  domainFileName = 'dwrDomain.txt'
+  problemFileName = 'dwrProblem.txt'
   #gp = GraphPlan(domain, problem)
-  problem = DWRProblem(domain, problem)
+  problem = DWRProblem(domainFileName, problemFileName)
   plan = aStarSearch(problem, heuristic=graphPlanHeuristic)
-  for action in plan:
-    print action
+  if not plan:
+    print "No plan found"
+  else:
+    for action in plan:
+      print action
