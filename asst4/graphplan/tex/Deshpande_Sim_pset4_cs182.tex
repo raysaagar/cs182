@@ -57,13 +57,127 @@
 \item Here, we implemented the missing functions in GraphPlan and PlanGraph. Please see the code for the implementation.
 
 \item \begin{enumerate}[(a)]
-\item
+\item Upon running on the given problem instance, we get the following output:
+\begin{verbatim}
+final plan
+q2
+Lbq2
+r1
+Lar1
+ar
+bq
+Mq21
+Mr12
+Uar2
+Ubq1
+[Finished in 1.1s]
+\end{verbatim}
 
-\item
+Note that GraphPlan includes the noops in its plan.
 
-\item
+\item We create three other problem instances, located in \verb|dwrProblem2.txt|, \verb|dwrProblem3.txt|, and \verb|dwrProblem4.txt|. In \verb|dwrProblem2.txt|, we switched the locations of $a$ and $b$, but kept the robot locations the same. This should still be solvable, and it is. In \verb|dwrProblem3.txt|, we made the goal state include both \verb|a1| and \verb|a2|, which means the block should be in both locations, which is clearly impossible. Indeed, our code fails to find a plan on this problem. In \verb|dwrProblem4.txt|, we made the goal state just be \verb|a1 b1|, where both blocks are in location 1, and keep the original state the same as in the original problem. This should also be solvable, but we will see later the benefit of A* search on this case.
+
+\item Here we include the final plans outputted by our GraphPlan code. We included the plan for the original \verb|dwrProblem.txt| above. Next, we include the plan for \verb|dwrProblem2.txt|:
+
+\begin{verbatim}
+final plan
+Lbr1
+q2
+r1
+Laq2
+Mq21
+Mr12
+aq
+br
+Ubr2
+Uaq1
+[Finished in 1.1s]
+\end{verbatim}
+
+Here is the plan for \verb|dwrProblem3.txt|:
+\begin{verbatim}
+could not find a plan
+[Finished in 2.4s]
+\end{verbatim}
+
+Here is the plan for \verb|dwrProblem4.txt|:
+\begin{verbatim}
+final plan
+q2
+r1
+Lbq2
+a1
+ur
+bq
+Lar1
+r1
+Mq21
+Ubq1
+Uar1
+[Finished in 1.1s]
+\end{verbatim}
+
 \end{enumerate}
 \end{enumerate}
 
 \section{Part B: Graphplan as a heuristic for A*}
+Now, we use a relaxed version of Graphplan as a heuristic for A* search. For each state, we expand a relaxed version of the planning graph, omitting the computation of mutex relations, until we reach a layer that includes all goal propositions. We then use the number of layers that is required to expand all goal propositions as our heuristic for A* search.
+
+\begin{enumerate}[(a)]
+\item Our Graphplan heuristic is admissable because at each step, running an actual Graphplan would return the number of steps required to reach the goal state. However, we run a relaxed version of Graphplan, which ignores mutexes and returns the number of levels required to expand all the goal propositions. This is admissable because it always underestimates or is equal to the actual number of actions required to reach the goal state, since it is a relaxed version of the problem. It never overestimates because it allows actions to exist that would have otherwise been mutually exclusive.
+
+\item We implemented this relaxed planning graph heuristic and used it in A* to find a plan for the problem instance provided in the code. The plan found for the original problem is as follows:
+
+\begin{verbatim}
+Lbq2
+Lar1
+Mq21
+Mr12
+Ubq1
+Uar2
+[Finished in 1.2s]
+\end{verbatim}
+
+\item Here we provide the plans found by the A* heuristic:
+Here is the plan found by A* for \verb|dwrProblem.txt|:
+\begin{verbatim}
+Lbq2
+Lar1
+Mq21
+Mr12
+Ubq1
+Uar2
+[Finished in 1.2s]
+\end{verbatim}
+
+Here is the plan found by A* for \verb|dwrProblem2.txt|:
+\begin{verbatim}
+Lbr1
+Laq2
+Mq21
+Mr12
+Ubr2
+Uaq1
+[Finished in 1.2s]
+\end{verbatim}
+
+Here is the plan found by A* for \verb|dwrProblem3.txt|:
+\begin{verbatim}
+No plan found
+[Finished in 1.6s]
+\end{verbatim}
+
+Here is the plan found by A* for \verb|dwrProblem4.txt|:
+\begin{verbatim}
+Lbq2
+Mq21
+Ubq1
+[Finished in 0.5s]
+\end{verbatim}
+
+\end{enumerate}
+
+Here we compare the performance and quality of the A* plan with the Graphplan results. For two of the domains, the original domain and \verb|dwrProblem2.txt|, the A* and Graphplan algorithms both run in around the same time. However, we see marked improvement in our A* algorithm over the Graphplan algorithm in \verb|dwrProblem3.txt| and \verb|dwrProblem4.txt|. In problem 3, there is no plan that can be made, and we see that A* finds this much faster than Graphplan does. In \verb|dwrProblem4.txt|, we see that Graphplan makes a much worse plan (and much more inefficient plan) than A* finds, in addition to taking much longer. Graphplan makes a redundant and not optimal action plan, where it lifts up block A and then puts it back down in the same place. However, A* is optimal, so it finds the shorter solution in a much shorter time as well. It appears that A* with the relaxed graphplan heuristic is a superior algorithm. 
+
+In the cases where A* with the graphplan heuristic takes around the same amount of time as Graphplan, this is because even though A* does Graphplan many more times, it uses a relaxed version each time without considering mutexes so each run of the graphplan is much faster. This means that taking mutexes into account took a lot of computational time. We also noticed that when we run A* with a null heuristic it is much faster for the domains that we tested. However, this is probably because the domains we tested were small and simple, and so it was not worth it to compute the heuristic so many times and it was easier to just search the entire tree. But, in larger problems the heuristic will help a lot more.
 \end{document}
