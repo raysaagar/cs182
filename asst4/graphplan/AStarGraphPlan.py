@@ -109,7 +109,7 @@ def aStarSearch(problem, heuristic=graphPlanHeuristic):
 
 if __name__ == '__main__':
   domainFileName = 'dwrDomain.txt'
-  problemFileName = 'dwrProblem.txt'
+  problemFileName = 'dwrProblem3.txt'
   #gp = GraphPlan(domain, problem)
   problem = DWRProblem(domainFileName, problemFileName)
   plan = aStarSearch(problem, heuristic=graphPlanHeuristic)
