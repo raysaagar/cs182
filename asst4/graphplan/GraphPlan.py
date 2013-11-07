@@ -199,7 +199,7 @@ class GraphPlan(object):
 
 if __name__ == '__main__':
     domain = 'dwrDomain.txt'
-    problem = 'dwrProblem1.txt'
+    problem = 'dwrProblem.txt'
     gp = GraphPlan(domain, problem)
 
 
