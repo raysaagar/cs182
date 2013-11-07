@@ -11,6 +11,7 @@ from Parser import Parser
 from Action import Action
 from random import choice
 
+
 class GraphPlan(object):
     '''
     A class for initializing and running the graphplan algorithm
