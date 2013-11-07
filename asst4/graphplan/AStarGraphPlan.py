@@ -20,23 +20,21 @@ class DWRProblem:
     return self.initialState
 
   def isGoalState(self, state):
-    return len(state) == len(self.goal) and all([s in self.goal for s in state])
+    return all([s in state for s in self.goal])
 
   # returns list of tuples of (state, action)
   def getSuccessors(self, state):
     successors = []
+
     for action in [a for a in self.actions if all(preCond in state for preCond in a.getPre())]:
       # add all the adds to list of propositions in state, remove 'deletes' from the list of propositions in state
       # this applies an action onto state
-      newState = state + action.getAdd()
-      #print "BEFORE: ", len(newState)
+      newState = state + [prep for prep in action.getAdd() if prep not in state]
       newState = [prep for prep in newState if prep not in action.getDelete()]
-      #print "AFTER: ", len(newState)
-      successors.append((newState, action))
+      successors.append((newState, action, 0))
     return successors
 
   def getCostOfActions(self, movelist):
-    #print movelist
     return len(movelist)
 
 def graphPlanHeuristic(state, problem=None):
@@ -46,40 +44,56 @@ def graphPlanHeuristic(state, problem=None):
   """
   return 0
 
+def parameterizedSearch(problem, FrontierDataStructure, priorityFunction=None, heuristic=None):
+  """
+  Parameterized, generalized search problem
+
+  Args:
+      problem: The SearchProblem object
+      frontierDataStructure: the data structure to use, i.e. queue, stack, priority queue
+      heuristic: a heuristic function
+      
+  Returns:
+      The path to the goal state that was found by the search
+  """
+  if heuristic:
+    # x[0] is the current node. x[2] is the cost it took to get to the node
+    priorityFunction = lambda x: heuristic(x[0], problem) + x[2]
+
+  if priorityFunction:
+    frontier = FrontierDataStructure(priorityFunction)
+  else:
+    frontier = FrontierDataStructure()
+
+  visited = []
+  node = problem.getStartState()
+  frontier.push((node, None, 0, []))
+  visited.append(node)
+
+  while not frontier.isEmpty():
+    # represent each step of search as a four-tuple
+    # actionHistory is a list of all actions up to but not including
+    # the current node
+    node, action, currentCost, actionHistory = frontier.pop()
+    if problem.isGoalState(node):
+      return actionHistory + [action]
+
+    for (successor, nextAction, stepCost) in problem.getSuccessors(node):
+      if successor not in visited: ## CHANGE THIS LATER (propositions could be in different order)
+        visited.append(successor)
+        frontier.push((successor, nextAction, currentCost + stepCost, 
+          actionHistory + [action] if action else []))
+
 def aStarSearch(problem, heuristic=graphPlanHeuristic):
   "Search the node that has the lowest combined cost and heuristic first."
-
-  # use priority queue to have costs
-  fringe = util.PriorityQueue()
-  fringe.push((problem.getStartState(), []), 0)
-  explored = []
-
-  while not fringe.isEmpty():
-    # get the next location
-    #location, moves = fringe.pop()
-    state, actions = fringe.pop()
-
-    # if we find the goal state, then we should be done.
-    # all other items in the p_queue will have worse cost
-    if problem.isGoalState(state):
-      return actions
-
-    #for coordinates, direction in problem.getSuccessors(location):
-    for propositions, action in problem.getSuccessors(state):
-      if not propositions in explored:
-        actionlist = actions + [action]
-        print len(actionlist)
-        new_cost = problem.getCostOfActions(actionlist) + heuristic(propositions, problem)
-        # push explored to fringe. also append or a* will fail
-        explored.append(propositions)
-        fringe.push((propositions, actionlist), new_cost)
-
-  return []
-
+  "*** YOUR CODE HERE ***"
+  return parameterizedSearch(problem, util.PriorityQueueWithFunction, None, heuristic)
 
 if __name__ == '__main__':
   domain = 'dwrDomain.txt'
   problem = 'dwrProblem.txt'
   #gp = GraphPlan(domain, problem)
   problem = DWRProblem(domain, problem)
-  print aStarSearch(problem, heuristic=graphPlanHeuristic)
+  plan = aStarSearch(problem, heuristic=graphPlanHeuristic)
+  for action in plan:
+    print action
