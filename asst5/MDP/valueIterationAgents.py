@@ -67,6 +67,7 @@ class ValueIterationAgent(ValueEstimationAgent):
       necessarily create this quantity and you may have
       to derive it on the fly.
     """
+    "*** YOUR CODE HERE ***"
     return sum([p * (self.mdp.getReward(state, action, s2) + self.discount*self.getValue(s2)) 
       for s2, p in self.mdp.getTransitionStatesAndProbs(state, action)])
 
