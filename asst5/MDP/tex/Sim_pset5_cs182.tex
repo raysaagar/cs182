@@ -1,0 +1,165 @@
+\documentclass[12pt]{article}
+%Mathematical TeX packages from the AMS
+\usepackage{amssymb,amsmath,amsthm} 
+%geometry (sets margin) 
+\usepackage[margin=1.25in]{geometry}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\def\ci{\perp\!\!\!\perp}
+%=============================================================
+%Redefining the 'section' environment as a 'problem' with dots at the end
+
+
+\makeatletter
+\newenvironment{problem}{\@startsection
+       {section}
+       {1}
+       {-.2em}
+       {-3.5ex plus -1ex minus -.2ex}
+       {2.3ex plus .2ex}
+       {\pagebreak[3] %basic widow-orphan matching
+       \large\bf\noindent{Problem }
+       }
+       }
+       {%\vspace{1ex}\begin{center} \rule{0.3\linewidth}{.3pt}\end{center}}
+       \begin{center}\large\bf \ldots\ldots\ldots\end{center}}
+\makeatother
+
+
+%=============================================================
+%Fancy-header package to modify header/page numbering 
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Brandon Sim}
+\chead{} 
+\rhead{\thepage} 
+\lfoot{\small Computer Science 182} 
+\cfoot{} 
+\rfoot{\footnotesize Problem Set 5} 
+\renewcommand{\headrulewidth}{.3pt} 
+\renewcommand{\footrulewidth}{.3pt}
+\setlength\voffset{-0.25in}
+\setlength\textheight{648pt}
+\setlength\parindent{0pt}
+%=============================================================
+%Contents of problem set
+
+\begin{document}
+\date{November 5, 2013}
+\title{Computer Science 182: Problem Set 5, Written}
+\author{Brandon Sim}
+
+\maketitle
+
+\section{Part B}
+The MDP can be written as a four-tuple $(S, A, T, R)$, where we define each below:
+
+The states are given as:
+\begin{equation*}
+S = \{\textrm{cool}, \textrm{warm}, \textrm{off}\}
+\end{equation*}
+
+or, for simplicity,
+\begin{equation*}
+S = \{C, W, O\}
+\end{equation*}
+
+The set of actions is given as:
+\begin{equation*}
+A = \{\textrm{drive fast}, \textrm{drive slow}\}
+\end{equation*}
+
+or, for simplicity,
+\begin{equation*}
+A = \{F, S\}
+\end{equation*}
+
+% \begin{equation*}
+% T^{F} = \left[
+% \begin{tabular}{c c c}
+% 1/4 & 3/4 & 0\\
+% 0 & 7/8 & 1/8\\
+% 0 & 0 & 1\\
+% \end{tabular}
+% \right]
+% \end{equation*}
+
+% \begin{equation*}
+% T^{S} = \left[
+% \begin{tabular}{c c c}
+% 1 & 0 & 0\\
+% 1/4 & 3/4 & 0\\
+% 0 & 0 & 1\\
+% \end{tabular}
+% \right]
+% \end{equation*}
+Then, the transition function $P$ can be written as:
+\begin{equation*}
+T_{F} = 
+\bordermatrix{&C&W&O\cr
+                C & 1/4 & 3/4 & 0\cr
+                W & 0 & 7/8 & 1/8\cr
+                O & 0 & 0 & 1\cr}
+\end{equation*}
+
+\begin{equation*}
+T_{S} = 
+\bordermatrix{&C&W&O\cr
+                C & 1 & 0 & 0\cr
+                W & 1/4 & 3/4 & 0\cr
+                O & 0 & 0 & 1\cr}
+\end{equation*}
+
+The matrices above are the same as enumerating, as we do below:
+\begin{align*}
+T_{F}(C, C) &= 1/4\\
+T_{F}(C, W) &= 3/4\\
+T_{S}(C, C) &= 1\\
+T_{F}(W, W) &= 7/8\\
+T_{F}(W, O) &= 1/8\\
+T_{S}(W, C) &= 1/4\\
+T_{S}(W, W) &= 3/4
+\end{align*}
+All unlisted transitions above have a probability of $0$.
+
+Finally, the reward function $R$ can be written as:
+\begin{align*}
+R_{\textrm{fast}}(s, s') &= 10 \hspace{2em}\forall s, s'\in S, \textrm{ except when } s = O\\
+R_{\textrm{slow}}(s, s') &= 4  \hspace{2.5em}\forall s, s'\in S, \textrm{ except when } s = O\\
+R_{a}(s, s') &= 0 \hspace{2.5em} \forall a\in A, s = O
+\end{align*}
+
+Or, specifically we can enumerate as follows:
+\begin{align*}
+R_F(C, C) &= 10\\
+R_F(C, W) &= 10\\
+R_S(C, C) &= 4\\
+R_F(W, W) &= 10\\
+R_F(W, O) &= 10\\
+R_S(W, W) &= 4\\
+R_S(W, C) &= 4\\
+\end{align*}
+
+All other transitions unlisted above have a reward of $0$, or are impossible transitions (for example, $R_F(C, O)$ is an impossible transition.)
+
+
+Now, we run policy iteration where we start with a policy where we drive fast no matter what the condition of the rover is. We simulate the first two iterations of the policy iteration algorithm here.
+
+
+
+
+The policy after the second iteration is:
+
+
+
+
+
+\section{Part C}
+MDP: Communicating location to other robots when making discovery
+HTN: Building sample collection-site booths
+
+Communicating location other robots when making a discovery can be an MDP planning problem. This is because there is some cost associated with communicating with other robots and the sensory data is not perfect. Thus, at each step, there is some probability associative with whether the data gather is accurate, and we want to take into consideration this probability and the cost to determine the reward for each step. This will provide us with the best possible move at each iteration.
+
+Building sample collection-site booths, on the other hand, would make a good HTN planning problem. This planning problem can be broken done into intermediate or complex functions, which can then be broken down into smaller primitive functions. This problem can easily take on the form of an HTN, and there is no probability to deal with in the robot's functionatlity at this point, so using an HTN makes more sense than an MDP.
+\end{document}
